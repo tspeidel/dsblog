@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.25.1" />
+  <meta name="author" content="Thomas Speidel">
+  <meta name="description" content="Data Scientist/Statistician">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css" integrity="sha512-GGGNUPDhnG8LEAEDsjqYIQns+Gu8RBs4j5XGlxl7UfRaZBhCCm5jenJkeJL8uPuOXGqgl8/H1gjlWQDRjd3cUQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Alternative Stats">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Alternative Stats">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2015-07-23-r-rmarkdown/">
+
+  
+
+  <title>Data Science in the Organization: Things I Learned in 2016 | Alternative Stats</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Alternative Stats</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Data Science in the Organization: Things I Learned in 2016</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-12-30 21:13:14 -0500 -0500" itemprop="datePublished">
+      Fri, Dec 30, 2016
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/rstats">rstats</a
+    >, 
+    
+    <a href="/tags/datascience">datascience</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Data%20Science%20in%20the%20Organization%3a%20Things%20I%20Learned%20in%202016&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Data%20Science%20in%20the%20Organization%3a%20Things%20I%20Learned%20in%202016"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Data%20Science%20in%20the%20Organization%3a%20Things%20I%20Learned%20in%202016"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Data%20Science%20in%20the%20Organization%3a%20Things%20I%20Learned%20in%202016&amp;body=%2fpost%2f2015-07-23-r-rmarkdown%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <div id="user-2016" class="section level1">
+<h1>useR! 2016</h1>
+<p><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAlBAAAAJGVhNDBmODhjLTQ2ZDQtNGU2OS1iMjA4LWMwMWI4ZjE4MmUxMw.jpg" /> The useR! conference in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level sponsors. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:</p>
+<p>People are doing really amazing things with Shiny. I was amazed at the pervasiveness of Shiny at EA Games. R’s superhero Hadley Whickham, never takes a break. His idea is to create a “pit of success” by having a uniform approach to import, tidy, transform, visualize, model and communicate. Daniela Witten methodology on interpretable regression using convex penalties: as I see it, it’s an attempt to do the least damage when people want simple interpretation of non-linear coefficients.</p>
+<p>Tal Galili gave a great presentation on heatmaps in R Rick Beckett on 40 years of S was fascinating: now I understand why the assignment operator in R is &lt;- (hint: jump to 0:29:00). We also learned that S and UNIX were two Bell Labs projects that grew together. Ironic how both took a while to be picked up and both grew into massively popular platforms (Linux, R).</p>
+</div>
+<div id="data-driven-decisions" class="section level1">
+<h1>Data-Driven Decisions</h1>
+<p>As a long-time data practitioner, I don’t get the cult-like infatuation with the term “data-driven” decisions (see here, here or here). Really folks: in the best case scenario we go from: data to evidence to decisions. If we want to go from data to decisions, hope for the best, because science may not back you up.</p>
+<p>Using the data to guide the data analysis is almost as dangerous as not doing so In health research, the term “data driven” has negative connotations. Instead, we have a much more scientifically sound evidence-based approach.</p>
+<p>A recent study suggests that women make better doctors than men (also here and here). There are many problems with this study. But it got me thinking of a way to explain how “data driven” can be dangerous: if women are better doctor because they treated many fewer patients than men and, therefore, had more time to spend with patients, then, the data-driven decision of having more women doctors won’t lead to improved health outcomes. But, hey, it’s “data driven”!</p>
+<p>This echos well-known statistician Frank Harrell: “Using the data to guide the data analysis is almost as dangerous as not doing so”.</p>
+</div>
+<div id="ethics-ethics-ethics" class="section level1">
+<h1>Ethics, Ethics, Ethics</h1>
+<p>The ties between statistics and ethics are well known (see here). Nearly every PhD biostatistician I know has sat on an ethics board at some points in their careers. Now, it seems that the broader field of Data Science is starting to pay attention to the ethical implications of their work. A few key events:</p>
+<p>A great article on ProPublica on predictive sentences in the US.</p>
+<ul>
+<li>More and more courses on ethics in data science are starting to emerge</li>
+<li>Cathy O’Neal’s book “Weapon of Math Destruction: How Big Data Increases Inequality and Threatens Democracy” is on my Amazon wish list.</li>
+<li>Google provides one of the best explanations I have seen on the difficulty of making fair decisions. As Thomas Lumley writes: “You have to decide what summary of the difference you care about, because you can’t make them all the same. This is old news in medical diagnostics, but appears not to have been considered in some other areas”.</li>
+</ul>
+</div>
+<div id="unicorns" class="section level1">
+<h1>Unicorns</h1>
+<p>This year has confirmed that Data Science is a wide and broad field, just like Medicine, Law or Engineering: many flavours, many specializations. Sorry folks, unicorns who are specialist in everything do not exist.</p>
+<p>Just like hospitals do not hire a family physicians and expect them to do the work of 100 specialists, just like we don’t hire a criminal lawyer when we need a tax lawyer, organizations cannot expect to hire one data scientist generalist and do the work of 100 specialists. Diversity is key.</p>
+<p>And let’s not fall into the trap of judging a Data Scientist by the <strong>mathematical or algorithmic sophistication</strong> of their arsenals. In the words of Kahneman, we would be substituting a question which we cannot answer with another one which we can answer.</p>
+</div>
+<div id="automation-model-factories" class="section level1">
+<h1>Automation &amp; Model Factories</h1>
+<p>Automation is really misunderstood. Really. I was pointed to Tom Davenport’s article on “Autonomous Analytics” and the concept of model factory as described in this video. It’s a great article and agree with pretty much everything. It’s what it does not say that concerns me. I commented in Tom’s article, but briefly:</p>
+<ul>
+<li>Not everything is worth automating (e.g. single points decisions)</li>
+<li>Not everything is automatable (causal models, explanatory models, exploratory analysis)</li>
+<li>Automation is more of an IT problem than a Data Science one (see Diego Kuonen’s fantastic slides on Demystifying Big Data, Data Science and Statistics). Which means it is the last mile of a repetitive insight generation process the mechanisms of which are well understood and that applies to a well understood class of problems (predictive).</li>
+</ul>
+</div>
+<div id="data-wrangling" class="section level1">
+<h1>Data Wrangling</h1>
+<p>Data munging/carpentry/wrangling, you know, that tedious, time consuming work that takes some 80% of a data scientist’s time is (still) not given enough credit by evangelists, vendors, consultants and speakers. Not sexy? Sure, but it’s a reality we must face nonetheless.</p>
+<p>What’s more, is hardly automatable (see above) and the human-in-the-loop provides myriads of necessary context and judgement calls that machines cannot make. I bet this has caused a lot of misunderstanding in organizations: “What? Are you trying to tell me we spent $100K for that fancy analytics software and it’s useless?”</p>
+</div>
+<div id="analytical-maturity" class="section level1">
+<h1>Analytical Maturity</h1>
+<p>If the keywords and verbiage used by organizations to advertise their data related jobs are any indication of their analytical maturity, there are promising signs! I work in the energy sector, not Silicon Valley, which means it takes a little while for us to pick up on technological or scientific innovations. For the past four years, I received weekly job alerts and, anecdotally, I can say that the expectations, clarity and keywords of the ad have improved significantly.</p>
+</div>
+<div id="analytics-podcasts" class="section level1">
+<h1>Analytics Podcasts</h1>
+<p>The number of really good analytics podcasts has grown significantly, to the point I can barely keep up.</p>
+<ul>
+<li>Not So Standard Deviation</li>
+<li>The Data Skeptic Podcast</li>
+<li>Partially Derivative</li>
+<li>Data Stories</li>
+<li>O’Reilly Data Show</li>
+<li>Talking Machines</li>
+<li>Not So Standard Deviations and O’Reilly Data Show are great detox if you are subject to a considerable amount of timeshare-sque-like products and hyperbolic claims by vendors or consultants.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it/"><span
+      aria-hidden="true">&larr;</span> One Common Mistake Data Analysts Make and How to Avoid It</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Thomas Speidel &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
