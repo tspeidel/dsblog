@@ -10,6 +10,9 @@ categories:
 tags: []
 ---
 
+{{% alert warning %}}
+Here's some important information...
+{{% /alert %}}
 
 One common mistake inexperienced analyst do in analysing data is that of **assigning a special role to time**. In my line of work, I see this a lot.  Signs of *chronophrenia*, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.
 
