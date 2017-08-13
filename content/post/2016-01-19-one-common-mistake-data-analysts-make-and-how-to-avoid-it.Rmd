@@ -10,10 +10,6 @@ categories:
 tags: []
 ---
 
-{{% alert warning %}}
-Here's some important information...
-{{% /alert %}}
-
 One common mistake inexperienced analyst do in analysing data is that of **assigning a special role to time**. In my line of work, I see this a lot.  Signs of *chronophrenia*, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.
 
 Don't get me wrong, I think there are plenty of scenarios when looking at time makes perfect sense and both the statistical, engineering and econometric literature continue to make substantial contributions to this area (I can think of [change point detection](https://en.wikipedia.org/wiki/Change_detection), [Kalman filters](https://en.wikipedia.org/wiki/Kalman_filter) and [Bayesian/Dynamic time series](http://www.springer.com/cda/content/document/cda_downloaddocument/9780387772370-c1.pdf?SGWID=0-0-45-771009-p173891512)).
