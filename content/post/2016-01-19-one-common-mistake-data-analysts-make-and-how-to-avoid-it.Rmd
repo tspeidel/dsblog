@@ -34,20 +34,16 @@ Visualization pioneer Edward Tufte has a very effective visual demonstration on 
 <br>
 
 ![](winning_streak_1.png)
-<br>
-
 *2009 Boston Red Sox win-loss record: when 4 or more wins occurs one after the other, the series is drawn in red. The causal attribution of win or loss streaks result in over-narratives.*
 
 
-<br><br><br><br>
+<br><br>
 
 ![](winning_streak_2.png)
 
-<br>
-
 *Not so fast: 3 randomized samples from the same data. There is little evidence for a causal mechanism of win or loss streaks that in the original series resulted in over-narratives. The invisible hand of chance.*
 
-<br><br><br>
+<br><br>
 
 So, enough about ranting against time. Let me play devil's advocate and list some arguments in favour of time:
 
