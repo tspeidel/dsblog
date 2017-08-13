@@ -65,7 +65,7 @@ And let's not fall into the trap of judging a Data Scientist by the **mathematic
 
 
 #Automation & Model Factories
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAkFAAAAJGJkMWIyMjZiLTQ3OWItNGVhNi1iNzBmLWY3YzQ0NjZjNzQ4Nw.png)
+![](automation.jpg)
 Automation is really misunderstood. Really. I was pointed to **Tom Davenport's** article on "[Autonomous Analytics](http://www.linkedin.com/pulse/move-your-analytics-operation-from-artisanal-tom-davenport?trk=hp-feed-article-title-like)" and the concept of **model factory** as described in [this video](http://www.youtube.com/watch?v=yNfsnv9gjrU). It's a great article and agree with pretty much everything. It's what it **does not say** that concerns me. I commented in Tom's article, but briefly:
 
 *    Not everything is worth automating (e.g. single points decisions)
@@ -75,7 +75,7 @@ Automation is really misunderstood. Really. I was pointed to **Tom Davenport's**
 
 
 #Data Wrangling
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAkDAAAAJDJmM2I4YjllLTFkOWItNDM3Mi04OTA0LTMwZTc3NTgwYzdkZA.jpg)
+![](data_wrangling.jpg)
 
 [Data munging/carpentry/wrangling](http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0), you know, that tedious, time consuming work that **takes some 80% of a data scientist's time** is (still) not given enough credit by evangelists, vendors, consultants and speakers. Not sexy? Sure, but it's a reality we must face nonetheless.
 
