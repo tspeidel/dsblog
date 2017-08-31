@@ -18,6 +18,7 @@ tags: ["rstats", "datascience"]
 <li><p>Tal Galili gave a great presentation on <strong><a href="http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Heatmaps-in-R-Overview-and-best-practices">heatmaps</a></strong> in R</p></li>
 <li><p>Rick Beckett on <strong><a href="http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Forty-years-of-S">40 years of S</a></strong> was fascinating: now I understand why the assignment operator in R is <code>&lt;-</code> (hint: jump to 0:29:00). We also learned that S and UNIX were two Bell Labs projects that grew together. Ironic how both took a while to be picked up and both grew into massively popular platforms (Linux, R).</p></li>
 </ul>
+<p><br><br></p>
 </div>
 <div id="data-driven-decisions" class="section level1">
 <h1>Data-Driven Decisions</h1>
@@ -32,6 +33,7 @@ tags: ["rstats", "datascience"]
 <blockquote>
 <p>Using the data to guide the data analysis is almost as dangerous as not doing so“.</p>
 </blockquote>
+<p><br><br></p>
 </div>
 <div id="ethics-ethics-ethics" class="section level1">
 <h1>Ethics, Ethics, Ethics</h1>
@@ -46,21 +48,24 @@ tags: ["rstats", "datascience"]
 <li>Cathy O’Neal’s book “<a href="http://blogs.scientificamerican.com/roots-of-unity/review-weapons-of-math-destruction/">Weapon of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</a>” is on my <a href="http://a.co/0weW8WA">Amazon wish list</a>.</li>
 <li>Google provides one of the <a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">best explanations</a> I have seen on the difficulty of making fair decisions. As <a href="http://www.statschat.org.nz/2017/01/01/kinds-of-fairness-worth-working-for/">Thomas Lumley</a> writes: “<strong>You have to decide what summary of the difference you care about, because you can’t make them all the same</strong>. This is old news in medical diagnostics, but appears not to have been considered in some other areas”.</li>
 </ul>
+<p><br><br></p>
 </div>
 <div id="unicorns" class="section level1">
 <h1>Unicorns</h1>
 <p><img src="https://s-media-cache-ak0.pinimg.com/736x/9d/0e/e6/9d0ee6c0049e088172590e0d81b1684c--polygon-art-diy-paper.jpg" /> This year has confirmed that Data Science is a <strong>wide and broad field</strong>, just like Medicine, Law or Engineering: many flavours, many specializations. Sorry folks, <strong>unicorns who are specialist in everything do not exist</strong>.</p>
 <p>Just like hospitals do not hire a family physicians and expect them to do the work of 100 specialists, just like we don’t hire a criminal lawyer when we need a tax lawyer, organizations cannot expect to hire one data scientist generalist and do the work of 100 specialists. <a href="http://drewconway.com/zia/2013/7/18/warning-do-not-feed-the-wildebeests"><strong>Diversity</strong></a> is key.</p>
 <p>And let’s not fall into the trap of judging a Data Scientist by the <strong>mathematical or algorithmic sophistication</strong> of their arsenals. In the words of <a href="http://en.wikipedia.org/wiki/Daniel_Kahneman">Kahneman</a>, we would be substituting a question which we cannot answer with a different one which we can answer.</p>
+<p><br><br></p>
 </div>
 <div id="automation-model-factories" class="section level1">
 <h1>Automation &amp; Model Factories</h1>
-<p><img src="automation.jpg" /> Automation is really misunderstood. Really. I was pointed to <strong>Tom Davenport’s</strong> article on “<a href="http://www.linkedin.com/pulse/move-your-analytics-operation-from-artisanal-tom-davenport?trk=hp-feed-article-title-like">Autonomous Analytics</a>” and the concept of <strong>model factory</strong> as described in <a href="http://www.youtube.com/watch?v=yNfsnv9gjrU">this video</a>. It’s a great article and agree with pretty much everything. It’s what it <strong>does not say</strong> that concerns me. I commented in Tom’s article, but briefly:</p>
+<p><img src="automation.png" /> Automation is really misunderstood. Really. I was pointed to <strong>Tom Davenport’s</strong> article on “<a href="http://www.linkedin.com/pulse/move-your-analytics-operation-from-artisanal-tom-davenport?trk=hp-feed-article-title-like">Autonomous Analytics</a>” and the concept of <strong>model factory</strong> as described in <a href="http://www.youtube.com/watch?v=yNfsnv9gjrU">this video</a>. It’s a great article and agree with pretty much everything. It’s what it <strong>does not say</strong> that concerns me. I commented in Tom’s article, but briefly:</p>
 <ul>
 <li>Not everything is worth automating (e.g. single points decisions)</li>
 <li>Not everything is automatable (causal models, explanatory models, exploratory analysis)</li>
 <li>Automation is more of an IT problem than a Data Science one (see <strong>Diego Kuonen’s</strong> fantastic slides on <a href="http://www.slideshare.net/kuonen/demystifying-big-data-data-science-and-statistics-along-with-machine-intelligence-and-learning">Demystifying Big Data, Data Science and Statistics</a>). <em>Which means it is the last mile of a repetitive insight generation process the mechanisms of which are well understood and that applies to a well understood class of problems (predictive)</em>.</li>
 </ul>
+<p><br><br></p>
 </div>
 <div id="data-wrangling" class="section level1">
 <h1>Data Wrangling</h1>
@@ -70,6 +75,7 @@ tags: ["rstats", "datascience"]
 </div>
 <p><a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0">Data munging/carpentry/wrangling</a>, you know, that tedious, time consuming work that <strong>takes some 80% of a data scientist’s time</strong> is (still) not given enough credit by evangelists, vendors, consultants and speakers. Not sexy? Sure, but it’s a reality we must face nonetheless.</p>
 <p>What’s more, is hardly automatable (see above) and the <a href="http://www.oreilly.com/ideas/why-data-preparation-frameworks-rely-on-human-in-the-loop-systems">human-in-the-loop</a> provides myriads of necessary context and judgement calls that machines cannot make. I bet this has caused a lot of misunderstanding in organizations: “<em>What? Are you trying to tell me we spent $100K for that fancy analytics software and it’s useless?</em>”</p>
+<p><br><br></p>
 </div>
 <div id="analytical-maturity" class="section level1">
 <h1>Analytical Maturity</h1>
@@ -78,6 +84,7 @@ tags: ["rstats", "datascience"]
 
 </div>
 <p>If the keywords and verbiage used by organizations to advertise their data related jobs are any indication of their <strong>analytical maturity</strong>, there are promising signs! I work in the energy sector, not Silicon Valley, which means it takes a little while for us to pick up on technological or scientific innovations. For the past four years, I received weekly job alerts and, anecdotally, I can say that the expectations, clarity and keywords of the ad have improved significantly.</p>
+<p><br><br></p>
 </div>
 <div id="analytics-podcasts" class="section level1">
 <h1>Analytics Podcasts</h1>

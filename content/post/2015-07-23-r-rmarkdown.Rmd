@@ -24,7 +24,7 @@ The [useR! conference](http://user2016.org/) in Stanford was awesome. Never did 
 
 *    Rick Beckett on **[40 years of S](http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Forty-years-of-S)** was fascinating: now I understand why the assignment operator in R is `<-` (hint: jump to 0:29:00). We also learned that S and UNIX were two Bell Labs projects that grew together. Ironic how both took a while to be picked up and both grew into massively popular platforms (Linux, R).
 
-
+<br><br>
 
 # Data-Driven Decisions
 
@@ -41,6 +41,7 @@ This echos well-known statistician [Frank Harrell](http://vkc.mc.vanderbilt.edu/
 >    Using the data to guide the data analysis is almost as dangerous as not doing so".
 
 
+<br><br>
 
 
 # Ethics, Ethics, Ethics
@@ -53,6 +54,7 @@ The ties between **statistics and ethics** are well known (see [here](http://www
 *    Cathy O'Neal's book "[Weapon of Math Destruction: How Big Data Increases Inequality and Threatens Democracy](http://blogs.scientificamerican.com/roots-of-unity/review-weapons-of-math-destruction/)" is on my [Amazon wish list](http://a.co/0weW8WA).
 *    Google provides one of the [best explanations](http://research.google.com/bigpicture/attacking-discrimination-in-ml/) I have seen on the difficulty of making fair decisions. As [Thomas Lumley](http://www.statschat.org.nz/2017/01/01/kinds-of-fairness-worth-working-for/) writes: "**You have to decide what summary of the difference you care about, because you can’t make them all the same**. This is old news in medical diagnostics, but appears not to have been considered in some other areas".
 
+<br><br>
 
 #Unicorns
 ![](https://s-media-cache-ak0.pinimg.com/736x/9d/0e/e6/9d0ee6c0049e088172590e0d81b1684c--polygon-art-diy-paper.jpg)
@@ -62,16 +64,19 @@ Just like hospitals do not hire a family physicians and expect them to do the wo
 
 And let's not fall into the trap of judging a Data Scientist by the **mathematical or algorithmic sophistication** of their arsenals. In the words of [Kahneman](http://en.wikipedia.org/wiki/Daniel_Kahneman), we would be substituting a question which we cannot answer with a different one which we can answer.
 
+<br><br>
 
 
 #Automation & Model Factories
-![](automation.jpg)
+![](automation.png)
 Automation is really misunderstood. Really. I was pointed to **Tom Davenport's** article on "[Autonomous Analytics](http://www.linkedin.com/pulse/move-your-analytics-operation-from-artisanal-tom-davenport?trk=hp-feed-article-title-like)" and the concept of **model factory** as described in [this video](http://www.youtube.com/watch?v=yNfsnv9gjrU). It's a great article and agree with pretty much everything. It's what it **does not say** that concerns me. I commented in Tom's article, but briefly:
 
 *    Not everything is worth automating (e.g. single points decisions)
 *    Not everything is automatable (causal models, explanatory models, exploratory analysis)
 *    Automation is more of an IT problem than a Data Science one (see **Diego Kuonen's** fantastic slides on [Demystifying Big Data, Data Science and Statistics](http://www.slideshare.net/kuonen/demystifying-big-data-data-science-and-statistics-along-with-machine-intelligence-and-learning)). *Which means it is the last mile of a repetitive insight generation process the mechanisms of which are well understood and that applies to a well understood class of problems (predictive)*.
 
+
+<br><br>
 
 
 #Data Wrangling
@@ -81,6 +86,7 @@ Automation is really misunderstood. Really. I was pointed to **Tom Davenport's**
 
 What's more, is hardly automatable (see above) and the [human-in-the-loop](http://www.oreilly.com/ideas/why-data-preparation-frameworks-rely-on-human-in-the-loop-systems) provides myriads of necessary context and judgement calls that machines cannot make. I bet this has caused a lot of misunderstanding in organizations: "*What? Are you trying to tell me we spent $100K for that fancy analytics software and it's useless?*"
 
+<br><br>
 
 
 
@@ -89,6 +95,7 @@ What's more, is hardly automatable (see above) and the [human-in-the-loop](http:
 
 If the keywords and verbiage used by organizations to advertise their data related jobs are any indication of their **analytical maturity**, there are promising signs! I work in the energy sector, not Silicon Valley, which means it takes a little while for us to pick up on technological or scientific innovations. For the past four years, I received weekly job alerts and, anecdotally, I can say that the expectations, clarity and keywords of the ad have improved significantly.
 
+<br><br>
 
 
 

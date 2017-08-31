@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on Alternative Stats</title>
-    <link>/tags/rstats.html</link>
+    <link>https://alternative-stats.netlify.com/tags/rstats.html</link>
     <description>Recent content in Rstats on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,69 +12,104 @@
     
     <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
-      <link>/post/2015-07-23-r-rmarkdown.html</link>
+      <link>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</guid>
       <description>&lt;div id=&#34;user-2016&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;useR! 2016&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAlBAAAAJGVhNDBmODhjLTQ2ZDQtNGU2OS1iMjA4LWMwMWI4ZjE4MmUxMw.jpg&#34; /&gt; The useR! conference in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level sponsors. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:&lt;/p&gt;
-&lt;p&gt;People are doing really amazing things with Shiny. I was amazed at the pervasiveness of Shiny at EA Games. R’s superhero Hadley Whickham, never takes a break. His idea is to create a “pit of success” by having a uniform approach to import, tidy, transform, visualize, model and communicate. Daniela Witten methodology on interpretable regression using convex penalties: as I see it, it’s an attempt to do the least damage when people want simple interpretation of non-linear coefficients.&lt;/p&gt;
-&lt;p&gt;Tal Galili gave a great presentation on heatmaps in R Rick Beckett on 40 years of S was fascinating: now I understand why the assignment operator in R is &amp;lt;- (hint: jump to 0:29:00). We also learned that S and UNIX were two Bell Labs projects that grew together. Ironic how both took a while to be picked up and both grew into massively popular platforms (Linux, R).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;stanford.jpg&#34; /&gt; The &lt;a href=&#34;http://user2016.org/&#34;&gt;useR! conference&lt;/a&gt; in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level &lt;a href=&#34;http://user2016.org/#sponsors&#34;&gt;sponsors&lt;/a&gt;. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;People are doing really amazing things with &lt;strong&gt;Shiny&lt;/strong&gt;. I was amazed at the pervasiveness of Shiny at &lt;a href=&#34;http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/RServer-Operationalizing-R-at-Electronic-Arts&#34;&gt;EA Games&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R’s superhero &lt;strong&gt;Hadley Whickham&lt;/strong&gt;, never takes a break. His idea is to create a “&lt;a href=&#34;http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics&#34;&gt;pit of success&lt;/a&gt;” by having a uniform approach to import, tidy, transform, visualize, model and communicate.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Daniela Witten methodology on &lt;strong&gt;&lt;a href=&#34;http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Flexible-and-Interpretable-Regression-Using-Convex-Penalties&#34;&gt;interpretable regression using convex penalties&lt;/a&gt;&lt;/strong&gt;: as I see it, it’s an attempt to do the least damage when people want simple interpretation of non-linear coefficients.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tal Galili gave a great presentation on &lt;strong&gt;&lt;a href=&#34;http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Heatmaps-in-R-Overview-and-best-practices&#34;&gt;heatmaps&lt;/a&gt;&lt;/strong&gt; in R&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rick Beckett on &lt;strong&gt;&lt;a href=&#34;http://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Forty-years-of-S&#34;&gt;40 years of S&lt;/a&gt;&lt;/strong&gt; was fascinating: now I understand why the assignment operator in R is &lt;code&gt;&amp;lt;-&lt;/code&gt; (hint: jump to 0:29:00). We also learned that S and UNIX were two Bell Labs projects that grew together. Ironic how both took a while to be picked up and both grew into massively popular platforms (Linux, R).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-driven-decisions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Data-Driven Decisions&lt;/h1&gt;
 &lt;p&gt;As a long-time data practitioner, I don’t get the cult-like infatuation with the term “data-driven” decisions (see here, here or here). Really folks: in the best case scenario we go from: data to evidence to decisions. If we want to go from data to decisions, hope for the best, because science may not back you up.&lt;/p&gt;
-&lt;p&gt;Using the data to guide the data analysis is almost as dangerous as not doing so In health research, the term “data driven” has negative connotations. Instead, we have a much more scientifically sound evidence-based approach.&lt;/p&gt;
-&lt;p&gt;A recent study suggests that women make better doctors than men (also here and here). There are many problems with this study. But it got me thinking of a way to explain how “data driven” can be dangerous: if women are better doctor because they treated many fewer patients than men and, therefore, had more time to spend with patients, then, the data-driven decision of having more women doctors won’t lead to improved health outcomes. But, hey, it’s “data driven”!&lt;/p&gt;
-&lt;p&gt;This echos well-known statistician Frank Harrell: “Using the data to guide the data analysis is almost as dangerous as not doing so”.&lt;/p&gt;
+&lt;p&gt;In health research, the term “data driven” has negative connotations. Instead, we have a much more scientifically sound **[evidence-based]*(&lt;a href=&#34;http://en.wikipedia.org/wiki/Evidence-based_medicine)*&#34; class=&#34;uri&#34;&gt;http://en.wikipedia.org/wiki/Evidence-based_medicine)*&lt;/a&gt; approach.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;evidence_based.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;A recent study suggests that &lt;a href=&#34;http://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2593252&#34;&gt;women make better doctors than men&lt;/a&gt; (also &lt;a href=&#34;http://www.theatlantic.com/health/archive/2016/12/female-doctors-superiority/511034/&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.nbcnews.com/health/health-news/female-doctors-outperform-male-doctors-according-study-n697876&#34;&gt;here&lt;/a&gt;). There are &lt;a href=&#34;http://stream.org/whos-better-playing-doctor-boys-girls/&#34;&gt;many problems&lt;/a&gt; with this study. But it got me thinking of a way to explain how “data driven” can be dangerous: if women are better doctor because they treated many fewer patients than men and, therefore, had more time to spend with patients, then, the data-driven decision of having more women doctors won’t lead to improved health outcomes. But, hey, it’s “data driven”!&lt;/p&gt;
+&lt;p&gt;This echos well-known statistician &lt;a href=&#34;http://vkc.mc.vanderbilt.edu/people/harrell-frank&#34;&gt;Frank Harrell&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Using the data to guide the data analysis is almost as dangerous as not doing so“.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ethics-ethics-ethics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Ethics, Ethics, Ethics&lt;/h1&gt;
-&lt;p&gt;The ties between statistics and ethics are well known (see here). Nearly every PhD biostatistician I know has sat on an ethics board at some points in their careers. Now, it seems that the broader field of Data Science is starting to pay attention to the ethical implications of their work. A few key events:&lt;/p&gt;
-&lt;p&gt;A great article on ProPublica on predictive sentences in the US.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;ethics.jpg&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;The ties between &lt;strong&gt;statistics and ethics&lt;/strong&gt; are well known (see &lt;a href=&#34;http://www.jstor.org/stable/3564481?seq=1#page_scan_tab_contents&#34;&gt;here&lt;/a&gt;). Nearly every PhD biostatistician I know has sat on an ethics board at some points in their careers. Now, it seems that the broader field of &lt;strong&gt;Data Science is starting to pay attention to the ethical implications of their work&lt;/strong&gt;. A few key events:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;More and more courses on ethics in data science are starting to emerge&lt;/li&gt;
-&lt;li&gt;Cathy O’Neal’s book “Weapon of Math Destruction: How Big Data Increases Inequality and Threatens Democracy” is on my Amazon wish list.&lt;/li&gt;
-&lt;li&gt;Google provides one of the best explanations I have seen on the difficulty of making fair decisions. As Thomas Lumley writes: “You have to decide what summary of the difference you care about, because you can’t make them all the same. This is old news in medical diagnostics, but appears not to have been considered in some other areas”.&lt;/li&gt;
+&lt;li&gt;A great article on ProPublica on &lt;a href=&#34;http://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing&#34;&gt;predictive sentencing&lt;/a&gt; in the US.&lt;/li&gt;
+&lt;li&gt;More and more &lt;a href=&#34;http://www.edx.org/course/data-science-ethics-michiganx-ds101x-1&#34;&gt;courses&lt;/a&gt; on ethics in data science are starting to emerge&lt;/li&gt;
+&lt;li&gt;Cathy O’Neal’s book “&lt;a href=&#34;http://blogs.scientificamerican.com/roots-of-unity/review-weapons-of-math-destruction/&#34;&gt;Weapon of Math Destruction: How Big Data Increases Inequality and Threatens Democracy&lt;/a&gt;” is on my &lt;a href=&#34;http://a.co/0weW8WA&#34;&gt;Amazon wish list&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Google provides one of the &lt;a href=&#34;http://research.google.com/bigpicture/attacking-discrimination-in-ml/&#34;&gt;best explanations&lt;/a&gt; I have seen on the difficulty of making fair decisions. As &lt;a href=&#34;http://www.statschat.org.nz/2017/01/01/kinds-of-fairness-worth-working-for/&#34;&gt;Thomas Lumley&lt;/a&gt; writes: “&lt;strong&gt;You have to decide what summary of the difference you care about, because you can’t make them all the same&lt;/strong&gt;. This is old news in medical diagnostics, but appears not to have been considered in some other areas”.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;unicorns&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Unicorns&lt;/h1&gt;
-&lt;p&gt;This year has confirmed that Data Science is a wide and broad field, just like Medicine, Law or Engineering: many flavours, many specializations. Sorry folks, unicorns who are specialist in everything do not exist.&lt;/p&gt;
-&lt;p&gt;Just like hospitals do not hire a family physicians and expect them to do the work of 100 specialists, just like we don’t hire a criminal lawyer when we need a tax lawyer, organizations cannot expect to hire one data scientist generalist and do the work of 100 specialists. Diversity is key.&lt;/p&gt;
-&lt;p&gt;And let’s not fall into the trap of judging a Data Scientist by the &lt;strong&gt;mathematical or algorithmic sophistication&lt;/strong&gt; of their arsenals. In the words of Kahneman, we would be substituting a question which we cannot answer with another one which we can answer.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s-media-cache-ak0.pinimg.com/736x/9d/0e/e6/9d0ee6c0049e088172590e0d81b1684c--polygon-art-diy-paper.jpg&#34; /&gt; This year has confirmed that Data Science is a &lt;strong&gt;wide and broad field&lt;/strong&gt;, just like Medicine, Law or Engineering: many flavours, many specializations. Sorry folks, &lt;strong&gt;unicorns who are specialist in everything do not exist&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Just like hospitals do not hire a family physicians and expect them to do the work of 100 specialists, just like we don’t hire a criminal lawyer when we need a tax lawyer, organizations cannot expect to hire one data scientist generalist and do the work of 100 specialists. &lt;a href=&#34;http://drewconway.com/zia/2013/7/18/warning-do-not-feed-the-wildebeests&#34;&gt;&lt;strong&gt;Diversity&lt;/strong&gt;&lt;/a&gt; is key.&lt;/p&gt;
+&lt;p&gt;And let’s not fall into the trap of judging a Data Scientist by the &lt;strong&gt;mathematical or algorithmic sophistication&lt;/strong&gt; of their arsenals. In the words of &lt;a href=&#34;http://en.wikipedia.org/wiki/Daniel_Kahneman&#34;&gt;Kahneman&lt;/a&gt;, we would be substituting a question which we cannot answer with a different one which we can answer.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;automation-model-factories&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Automation &amp;amp; Model Factories&lt;/h1&gt;
-&lt;p&gt;Automation is really misunderstood. Really. I was pointed to Tom Davenport’s article on “Autonomous Analytics” and the concept of model factory as described in this video. It’s a great article and agree with pretty much everything. It’s what it does not say that concerns me. I commented in Tom’s article, but briefly:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;automation.png&#34; /&gt; Automation is really misunderstood. Really. I was pointed to &lt;strong&gt;Tom Davenport’s&lt;/strong&gt; article on “&lt;a href=&#34;http://www.linkedin.com/pulse/move-your-analytics-operation-from-artisanal-tom-davenport?trk=hp-feed-article-title-like&#34;&gt;Autonomous Analytics&lt;/a&gt;” and the concept of &lt;strong&gt;model factory&lt;/strong&gt; as described in &lt;a href=&#34;http://www.youtube.com/watch?v=yNfsnv9gjrU&#34;&gt;this video&lt;/a&gt;. It’s a great article and agree with pretty much everything. It’s what it &lt;strong&gt;does not say&lt;/strong&gt; that concerns me. I commented in Tom’s article, but briefly:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Not everything is worth automating (e.g. single points decisions)&lt;/li&gt;
 &lt;li&gt;Not everything is automatable (causal models, explanatory models, exploratory analysis)&lt;/li&gt;
-&lt;li&gt;Automation is more of an IT problem than a Data Science one (see Diego Kuonen’s fantastic slides on Demystifying Big Data, Data Science and Statistics). Which means it is the last mile of a repetitive insight generation process the mechanisms of which are well understood and that applies to a well understood class of problems (predictive).&lt;/li&gt;
+&lt;li&gt;Automation is more of an IT problem than a Data Science one (see &lt;strong&gt;Diego Kuonen’s&lt;/strong&gt; fantastic slides on &lt;a href=&#34;http://www.slideshare.net/kuonen/demystifying-big-data-data-science-and-statistics-along-with-machine-intelligence-and-learning&#34;&gt;Demystifying Big Data, Data Science and Statistics&lt;/a&gt;). &lt;em&gt;Which means it is the last mile of a repetitive insight generation process the mechanisms of which are well understood and that applies to a well understood class of problems (predictive)&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-wrangling&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Data Wrangling&lt;/h1&gt;
-&lt;p&gt;Data munging/carpentry/wrangling, you know, that tedious, time consuming work that takes some 80% of a data scientist’s time is (still) not given enough credit by evangelists, vendors, consultants and speakers. Not sexy? Sure, but it’s a reality we must face nonetheless.&lt;/p&gt;
-&lt;p&gt;What’s more, is hardly automatable (see above) and the human-in-the-loop provides myriads of necessary context and judgement calls that machines cannot make. I bet this has caused a lot of misunderstanding in organizations: “What? Are you trying to tell me we spent $100K for that fancy analytics software and it’s useless?”&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;data_wrangling.jpg&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0&#34;&gt;Data munging/carpentry/wrangling&lt;/a&gt;, you know, that tedious, time consuming work that &lt;strong&gt;takes some 80% of a data scientist’s time&lt;/strong&gt; is (still) not given enough credit by evangelists, vendors, consultants and speakers. Not sexy? Sure, but it’s a reality we must face nonetheless.&lt;/p&gt;
+&lt;p&gt;What’s more, is hardly automatable (see above) and the &lt;a href=&#34;http://www.oreilly.com/ideas/why-data-preparation-frameworks-rely-on-human-in-the-loop-systems&#34;&gt;human-in-the-loop&lt;/a&gt; provides myriads of necessary context and judgement calls that machines cannot make. I bet this has caused a lot of misunderstanding in organizations: “&lt;em&gt;What? Are you trying to tell me we spent $100K for that fancy analytics software and it’s useless?&lt;/em&gt;”&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;analytical-maturity&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Analytical Maturity&lt;/h1&gt;
-&lt;p&gt;If the keywords and verbiage used by organizations to advertise their data related jobs are any indication of their analytical maturity, there are promising signs! I work in the energy sector, not Silicon Valley, which means it takes a little while for us to pick up on technological or scientific innovations. For the past four years, I received weekly job alerts and, anecdotally, I can say that the expectations, clarity and keywords of the ad have improved significantly.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://xolotl.org/wp-content/uploads/2016/11/7159036564_ec69766fe7_o.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;If the keywords and verbiage used by organizations to advertise their data related jobs are any indication of their &lt;strong&gt;analytical maturity&lt;/strong&gt;, there are promising signs! I work in the energy sector, not Silicon Valley, which means it takes a little while for us to pick up on technological or scientific innovations. For the past four years, I received weekly job alerts and, anecdotally, I can say that the expectations, clarity and keywords of the ad have improved significantly.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;analytics-podcasts&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Analytics Podcasts&lt;/h1&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAh-AAAAJGMxOWY3NzViLWEwYmItNDBkOS1iNDc3LTkyYTA5OGFmYjA4ZQ.png&#34; /&gt;
+
+&lt;/div&gt;
 &lt;p&gt;The number of really good analytics podcasts has grown significantly, to the point I can barely keep up.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Not So Standard Deviation&lt;/li&gt;
-&lt;li&gt;The Data Skeptic Podcast&lt;/li&gt;
-&lt;li&gt;Partially Derivative&lt;/li&gt;
-&lt;li&gt;Data Stories&lt;/li&gt;
-&lt;li&gt;O’Reilly Data Show&lt;/li&gt;
-&lt;li&gt;Talking Machines&lt;/li&gt;
-&lt;li&gt;Not So Standard Deviations and O’Reilly Data Show are great detox if you are subject to a considerable amount of timeshare-sque-like products and hyperbolic claims by vendors or consultants.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://soundcloud.com/nssd-podcast&#34;&gt;Not So Standard Deviation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dataskeptic.com/&#34;&gt;The Data Skeptic Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://partiallyderivative.com/&#34;&gt;Partially Derivative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://datastori.es/&#34;&gt;Data Stories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.oreilly.com/topics/oreilly-data-show-podcast&#34;&gt;O’Reilly Data Show&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Not So Standard Deviations and O’Reilly Data Show are great detox if you are subject to a considerable amount of timeshare-sque-like products and hyperbolic claims by vendors or consultants.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

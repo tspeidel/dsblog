@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alternative Stats</title>
-    <link>/categories.html</link>
+    <link>https://alternative-stats.netlify.com/categories.html</link>
     <description>Recent content in Categories on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,55 +11,55 @@
     
     <item>
       <title>Critical Thinking</title>
-      <link>/categories/critical-thinking.html</link>
-      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      <link>https://alternative-stats.netlify.com/categories/critical-thinking.html</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/critical-thinking.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/critical-thinking.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Analysis</title>
-      <link>/categories/data-analysis.html</link>
+      <link>https://alternative-stats.netlify.com/categories/data-analysis.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/data-analysis.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/data-analysis.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r.html</link>
+      <link>https://alternative-stats.netlify.com/categories/r.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>/categories/r.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/r.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistical Literacy</title>
-      <link>/categories/statistical-literacy.html</link>
-      <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
+      <link>https://alternative-stats.netlify.com/categories/statistical-literacy.html</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistical-literacy.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/statistical-literacy.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>/categories/statistics.html</link>
+      <link>https://alternative-stats.netlify.com/categories/statistics.html</link>
       <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistics.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/statistics.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Series</title>
-      <link>/categories/time-series.html</link>
+      <link>https://alternative-stats.netlify.com/categories/time-series.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/time-series.html</guid>
+      <guid>https://alternative-stats.netlify.com/categories/time-series.html</guid>
       <description></description>
     </item>
     

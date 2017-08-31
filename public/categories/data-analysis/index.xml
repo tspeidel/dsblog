@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Analysis on Alternative Stats</title>
-    <link>/categories/data-analysis.html</link>
+    <link>https://alternative-stats.netlify.com/categories/data-analysis.html</link>
     <description>Recent content in Data Analysis on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>One Common Mistake Data Analysts Make and How to Avoid It</title>
-      <link>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
+      <link>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
       <description>&lt;p&gt;One common mistake inexperienced analyst do in analysing data is that of &lt;strong&gt;assigning a special role to time&lt;/strong&gt;. In my line of work, I see this a lot. Signs of &lt;em&gt;chronophrenia&lt;/em&gt;, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.&lt;/p&gt;
 &lt;p&gt;Don’t get me wrong, I think there are plenty of scenarios when looking at time makes perfect sense and both the statistical, engineering and econometric literature continue to make substantial contributions to this area (I can think of &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Kalman_filter&#34;&gt;Kalman filters&lt;/a&gt; and &lt;a href=&#34;http://www.springer.com/cda/content/document/cda_downloaddocument/9780387772370-c1.pdf?SGWID=0-0-45-771009-p173891512&#34;&gt;Bayesian/Dynamic time series&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Often the analyst attempts to visually assess whether a &lt;strong&gt;shift in time exists&lt;/strong&gt;. The hope is that the shift can be tied to a special cause known to the analyst (for instance a change that was introduced at known point in time) and that this would represent evidence in favour or against a hypothesis.&lt;/p&gt;
@@ -29,18 +29,17 @@
 &lt;p&gt;To an untrained analyst, time is an open invitation to slice and dice the data until some interesting results are found: we will always find a reason for looking at things daily, weekly, monthly, quarterly, yearly. These are in fact, meaningful measures to a lot of businesses. Eventually, you are guaranteed to find something interesting or even significant. But it does not mean it’s true. But wait! Don’t take my word for it! &lt;a href=&#34;http://www.tylervigen.com/spurious-correlations&#34;&gt;Tyler Vigen&lt;/a&gt; assembled a very humorous collection of &lt;strong&gt;spurious correlations&lt;/strong&gt;. Vigen had enough material to fill a whole book. You don’t have to buy his book, though I would encourage you to do so. Some are available on Vigen’s website.&lt;/p&gt;
 &lt;p&gt;Visualization pioneer Edward Tufte has a very effective visual demonstration on &lt;strong&gt;streak-guessing&lt;/strong&gt; and &lt;strong&gt;over-narrative&lt;/strong&gt; around time (here, adapted from the &lt;a href=&#34;https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR&#34;&gt;original&lt;/a&gt;). On the top figure we see the actual win-loss record. At the bottom, notice what happens when we randomize the order on time.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;winning_streak_1.png&#34; /&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;2009 Boston Red Sox win-loss record: when 4 or more wins occurs one after the other, the series is drawn in red. The causal attribution of win or loss streaks result in over-narratives.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;winning_streak_1.png&#34; /&gt; &lt;em&gt;2009 Boston Red Sox win-loss record: when 4 or more wins occurs one after the other, the series is drawn in red. The causal attribution of win or loss streaks result in over-narratives.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;winning_streak_2.png&#34; /&gt;
 
 &lt;/div&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Not so fast: 3 randomized samples from the same data. There is little evidence for a causal mechanism of win or loss streaks that in the original series resulted in over-narratives. The invisible hand of chance.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;So, enough about ranting against time. Let me play devil’s advocate and list some arguments in favour of time:&lt;/p&gt;
 &lt;p&gt;When we do not understand a process, time is often a good proxy for something we are unable to measure. We should try to smooth time to detect trends. I’m a fan of LOESS for its flexibility.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;loess.gif&#34; alt=&#34;LOESS&#34; /&gt; LOESS (image from &lt;a href=&#34;https://simplystatistics.org/2017/08/08/code-for-my-educational-gifs/&#34;&gt;Simply Statistics&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Survival analysis (time to event analysis) is mostly concerned with the rate at which things are moving. Is a certain group reaching an event faster than another group? Survival analysis can effectively deal with survivorship bias.&lt;/p&gt;
 &lt;p&gt;When we introduce a change at a given time point, there are methods that try to deal with it, such as interrupted time series or &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt; (these can go by different names). For an overview, see Kontopantelis. Change point detection is an active area of research.&lt;/p&gt;
 &lt;p&gt;If you are embarking on an analysis, don’t jump on time as your first go-to measure. Think carefully about the problem and try first to identify all factors that may affect a response of interest. Explore those first, plot them against the response, plot them against each other. Try to learn as much about your problem without recurring to time immediately. When you do look at time, remember there are challenges unique to times that complicates things (autocorrelation and censoring to name a couple).&lt;/p&gt;

@@ -2,20 +2,117 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistical Literacy on Alternative Stats</title>
-    <link>/categories/statistical-literacy.html</link>
+    <link>https://alternative-stats.netlify.com/categories/statistical-literacy.html</link>
     <description>Recent content in Statistical Literacy on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Thomas Speidel</copyright>
-    <lastBuildDate>Tue, 19 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/statistical-literacy.html" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
+      <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
+      <description>&lt;p&gt;The best past of my job is that, as &lt;a href=&#34;http://www.nytimes.com/2000/07/28/us/john-tukey-85-statistician-coined-the-word-software.html?mcubz=0&#34;&gt;John Tukey&lt;/a&gt; famously said, &lt;strong&gt;I get to play in everyone’ sandbox&lt;/strong&gt;. It also brings positive unintended ramifications: we get to cross-pollinate fields. Perhaps, none of this is clearer than how biostatistics helps with &lt;a href=&#34;http://press.anu.edu.au/node/162/download&#34;&gt;policing serious crime in Australia&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;policing_resious_crime.jpg&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;One of the authors, Robyn Attewell, writes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Most of my statistical perspective is grounded in biostatistics which is the application of statistics in the study of disease and, more generally, the human condition. This is an area in which statistical principles have been well accepted and applied. I do not mean that all doctors know what a chi-square test is or could interpret a logistic regression. However, advances in knowledge in epidemiology and the treatment of disease have occurred through research which has been undertaken with the application of sound statistical methodology. The evidence base for prevention and treatment of disease has moved from personal experience and chronicles of case histories to global randomised controlled trials, longitudinal cohort studies and meta-analyses. The movement within the fields of public health and medicine towards a quantitative evidence base is so strong that the pharmaceutical industry, for example, is very highly regulated. New drug treatments are not able to be registered or receive government subsidy unless supported by a structured compilation of efficacy and safety data. It has to be proven beyond reasonable doubt that new medications work and their positive impact on the target disease outweighs any negatives through adverse side effects.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Attewell’s experience mirrors mine (and I bet, that of many other statisticians), having too worked in &lt;a href=&#34;http://epi-research.org/&#34;&gt;biostatistics&lt;/a&gt; for many years and later migrated into energy.&lt;/p&gt;
+&lt;p&gt;Perhaps not as homogeneous as in other fields - there are indeed isolated pockets of statistical excellence in the energy industry - I routinely come across areas that not only lack statistical principles, but where I perceive a mistrust in something that’s perceived as new and unfamiliar.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do we over-simplify the statistical methods so that they can be grasped by our audience at the cost of being woefully wrong?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;True, statistics and data science aren’t easy and thinking probabilistically is admittedly hard. This presents a challenge for the statistician or the data scientist: do we over-simplify the statistical methods so that they can be grasped by our audience at the cost of being woefully wrong? Do we, instead engage in the daunting task of educating our audience in statistical principles? Or shall we present the finding as unquestionable dogma … hey, just trust the fancy math?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Statistics is hard. Multiple regression is hard. Figuring out the appropriate denominator is hard. These errors aren’t so elementary. Andrew Gelman, 2016.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/stephensenn?lang=en&#34;&gt;Stephen John Senn&lt;/a&gt; captures parts of this dilemma when he writes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On the other hand, the need for clear results cannot be cited as grounds for only ever using the simplest of techniques. Statistics is no different from other sciences in this respect. Just as we cannot insist that chemist determine pH using litmus paper because that is what the non-chemist remembers from school, so we cannot insist that statisticians restrict themselves to a simple T-test because this was state of the art in 1908.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Our colleagues who focus on &lt;strong&gt;machine learning&lt;/strong&gt; (&lt;strong&gt;ML&lt;/strong&gt;) face similar dilemmas, perhaps even more so, given that ML methods tend to be uninterpretable &lt;a href=&#34;https://www.nature.com/news/can-we-open-the-black-box-of-ai-1.20731&#34;&gt;black-boxes&lt;/a&gt;. Two recent papers that touch on this subjects are &lt;a href=&#34;http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf&#34;&gt;Ribeiro&lt;/a&gt; et al. and &lt;a href=&#34;http://opim.wharton.upenn.edu/risk/library/WPAF201410-AlgorthimAversion-Dietvorst-Simmons-Massey.pdf&#34;&gt;Dietvorst&lt;/a&gt; et al.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ribeiro.png&#34; /&gt; &lt;img src=&#34;dietvorst.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There’s no question in my mind that we need to increase the level of statistical literacy. However, the job of filling the gap left by an educational system that has historically failed to teach statistics cannot be entirely left in the hands of applied statisticians and data scientists.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We teach our children the mathematics of certainty - geometry and trigonometry- but not the mathematics of uncertainty, statistical thinking. &lt;a href=&#34;https://en.wikipedia.org/wiki/Gerd_Gigerenzer&#34;&gt;Gert Gigerenzer&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;what-to-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What to Do?&lt;/h2&gt;
+&lt;p&gt;I see very encouraging signs in recent &lt;a href=&#34;https://en.wikipedia.org/wiki/Science,_technology,_engineering,_and_mathematics&#34;&gt;STEM&lt;/a&gt; graduates, anecdotally at least, since I see them much better prepared to recognize statistical problems.&lt;/p&gt;
+&lt;p&gt;However, the issue remains for those who have not had a chance to upgrade their skills: &lt;strong&gt;how then, do we increase data and statistical literacy in the current leaders and decision makers?&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vendors-consultants-and-hype-make-things-a-lot-harder&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Vendors, Consultants (and Hype) Make Things a Lot Harder&lt;/h2&gt;
+&lt;p&gt;For the practicing statistician and data scientist, vendors and consultants are a double edge sword. On one hands they help by bringing to light how statistics, ML (or whatever catchy word du jour is in vogue) can help organizations; because they have a more direct communication channel with upper management, the message makes it to the top.&lt;/p&gt;
+&lt;p&gt;On the other hand, they have little vested interests in educating, let alone provide a fair view of the landscape. And in the long run, this is damaging.&lt;/p&gt;
+&lt;p&gt;Perhaps, none of this damage is clearer than what’s happening with IBM Watson in health care where the “&lt;a href=&#34;https://www.technologyreview.com/s/607965/a-reality-check-for-ibms-ai-ambitions/&#34;&gt;&lt;em&gt;unrealistic timelines or promises&lt;/em&gt;&lt;/a&gt;” are now becoming obvious and, perhaps, backfiring.&lt;/p&gt;
+&lt;p&gt;I’m not too worried about health care where the unrealistic claims are usually met with a dismissive shrug, precisely because, as Attewel writes, statistical principles have been well accepted and applied in that field.&lt;/p&gt;
+&lt;p&gt;But think about areas where statistical principles are not nearly as pervasive. Lack of statistical literacy, means our defense mechanism is unprepared. Instead, the receiver has to rely on faulty heuristics and anecdotes such as: “&lt;em&gt;I heard SmartCo is using this tool, so it must be good&lt;/em&gt;” with little science to back them up.&lt;/p&gt;
+&lt;p&gt;With time, the organization realizes those promises never materialized, the claims were unrealistic, and preconceived notions are re-inforced after a brief hiatus of hope. In a field where there are no certain truths, it’s easy to throw away the baby with the bathwater.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Science and Statistics, including more specialized branches, such as biostatistics, have wide applicability in many analytical problems&lt;/li&gt;
+&lt;li&gt;Statistical literacy and critical thinking present a gap that is easily exploited&lt;/li&gt;
+&lt;li&gt;We need to do a better job at educating people unfamiliar with data science and statistics, but this cannot be left entirely in the hands of the practitioner&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>10 Big Data Myths</title>
+      <link>https://alternative-stats.netlify.com/post/10-big-data-myths.html</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/10-big-data-myths.html</guid>
+      <description>&lt;p&gt;Everyone seems to like top-10 lists and many organizations are interested in Big Data, so it seems timely to write my own top 10 list on Big Data. A premise is warranted. Those who know me, know how much I ditest the term “Big Data”. Yet, for good or worse, Big Data is here to stay and so it’s important that we try clarify what it is and it isn’t.&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;https://dzone.com/articles/10-big-data-myths-exploded&#34; class=&#34;uri&#34;&gt;https://dzone.com/articles/10-big-data-myths-exploded&lt;/a&gt; Gartner: &lt;a href=&#34;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&#34; class=&#34;uri&#34;&gt;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&lt;/a&gt; Diego slides: &lt;a href=&#34;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&#34; class=&#34;uri&#34;&gt;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&lt;/a&gt; &lt;a href=&#34;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&#34; class=&#34;uri&#34;&gt;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&lt;/a&gt; &lt;a href=&#34;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&#34; class=&#34;uri&#34;&gt;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;what-is-big-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is Big Data?&lt;/h2&gt;
+&lt;p&gt;First thing first: definitions. What is Big Data? The hardest thing about Big Data is defining it. Conventionally, Big Data is defined in terms of the 3 or 4 V’s:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Volume&lt;/li&gt;
+&lt;li&gt;Velocity&lt;/li&gt;
+&lt;li&gt;Variety&lt;/li&gt;
+&lt;li&gt;Veracity&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For an overview of each V, I refer you to Diego Kuonen’s excellent [slides] here(&lt;a href=&#34;https://image.slidesharecdn.com/pdibddsmlmsftfeb12017-170201151005/95/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation-9-638.jpg?cb=1485961990&#34; class=&#34;uri&#34;&gt;https://image.slidesharecdn.com/pdibddsmlmsftfeb12017-170201151005/95/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation-9-638.jpg?cb=1485961990&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;myths-facts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Myths &amp;amp; Facts&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Big Data will enable analytics within the organization. Not necessarily. You don’t need Big Data to become more analytically mature. Many organizations have become analytically astute without Big Data. For instance, look at CERN, Capital One, Wal-Mart, AT&amp;amp;T. As friend Diego Kuonen writes, &lt;strong&gt;Big Data is mostly a data management infrastructure&lt;/strong&gt; problem, and less an analytical one.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Big Data provides a single source of the truth. No. As a long time analytics practitioner, I’ve always struggled with the idea of single source of the truth, which I recognize as being a useful ideal in designing data systems. But when it comes to making sense of data, it is common to have multiple sources of the truth. It all depends on the question one is trying to answer. Consider the trivial reporting of some metric for regulatory compliance vs. reporting for business improvement processes. The two metrics may be given the same name, they may involve the same calculations, but they may come from different systems designed for different purposes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Big Data will make access to data easier No, or not yet.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Big Data is synonym of HADOOP Yes. While it is true that there are other standards, tools and technologies, the majority of the Big Data ecosystems are either based on HADOOP or strongly influenced by it. Big Data is becoming a substitute for HADOOP, Apache and any project revolving around them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;With Big Data and AI, organizations will no longer need Data Scientists, Data Engineers No. I’m told similar things were said in the past for coders and the demand has only increased ever since. Data does not automagically analyze itself, no matter how much AI you inject. Let’s not confuse automatable tasks with the myth of self-learning, eloquently summarized by &lt;a href=&#34;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&#34;&gt;Andrew Ng&lt;/a&gt;: &lt;em&gt;If a typical person can do a mental task with less than one second of thought, we can probably automate it using AI either now or in the near future.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With more data the task of organizing, curating, identifying, and preparing the data for analysis can only increase.&lt;/p&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Users will be able to interact with Big Data more easily I have no evidence of this, but I speculate that accessing data will be harder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The More the Data, the Better False. Maybe that’s true for the NSA (though even for them, I have some doubts). But most organizations do not have the deep pockets of a secretive government organization. Predictive models are usually built on samples: seldom is the whole data ever needed. There are also problems with having too large of a dataset, that to this day, we have not quite solved yet. Curse of large numbers.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Open Source is key for Big Data True. When one looks at the building blocks of most Big Data technology, they will soon realize it’s an ocean of open source initiatives without which we probably would not be having this conversation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>One Common Mistake Data Analysts Make and How to Avoid It</title>
-      <link>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
+      <link>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
       <description>&lt;p&gt;One common mistake inexperienced analyst do in analysing data is that of &lt;strong&gt;assigning a special role to time&lt;/strong&gt;. In my line of work, I see this a lot. Signs of &lt;em&gt;chronophrenia&lt;/em&gt;, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.&lt;/p&gt;
 &lt;p&gt;Don’t get me wrong, I think there are plenty of scenarios when looking at time makes perfect sense and both the statistical, engineering and econometric literature continue to make substantial contributions to this area (I can think of &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Kalman_filter&#34;&gt;Kalman filters&lt;/a&gt; and &lt;a href=&#34;http://www.springer.com/cda/content/document/cda_downloaddocument/9780387772370-c1.pdf?SGWID=0-0-45-771009-p173891512&#34;&gt;Bayesian/Dynamic time series&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Often the analyst attempts to visually assess whether a &lt;strong&gt;shift in time exists&lt;/strong&gt;. The hope is that the shift can be tied to a special cause known to the analyst (for instance a change that was introduced at known point in time) and that this would represent evidence in favour or against a hypothesis.&lt;/p&gt;
@@ -29,18 +126,17 @@
 &lt;p&gt;To an untrained analyst, time is an open invitation to slice and dice the data until some interesting results are found: we will always find a reason for looking at things daily, weekly, monthly, quarterly, yearly. These are in fact, meaningful measures to a lot of businesses. Eventually, you are guaranteed to find something interesting or even significant. But it does not mean it’s true. But wait! Don’t take my word for it! &lt;a href=&#34;http://www.tylervigen.com/spurious-correlations&#34;&gt;Tyler Vigen&lt;/a&gt; assembled a very humorous collection of &lt;strong&gt;spurious correlations&lt;/strong&gt;. Vigen had enough material to fill a whole book. You don’t have to buy his book, though I would encourage you to do so. Some are available on Vigen’s website.&lt;/p&gt;
 &lt;p&gt;Visualization pioneer Edward Tufte has a very effective visual demonstration on &lt;strong&gt;streak-guessing&lt;/strong&gt; and &lt;strong&gt;over-narrative&lt;/strong&gt; around time (here, adapted from the &lt;a href=&#34;https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR&#34;&gt;original&lt;/a&gt;). On the top figure we see the actual win-loss record. At the bottom, notice what happens when we randomize the order on time.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;winning_streak_1.png&#34; /&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;2009 Boston Red Sox win-loss record: when 4 or more wins occurs one after the other, the series is drawn in red. The causal attribution of win or loss streaks result in over-narratives.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;winning_streak_1.png&#34; /&gt; &lt;em&gt;2009 Boston Red Sox win-loss record: when 4 or more wins occurs one after the other, the series is drawn in red. The causal attribution of win or loss streaks result in over-narratives.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;winning_streak_2.png&#34; /&gt;
 
 &lt;/div&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Not so fast: 3 randomized samples from the same data. There is little evidence for a causal mechanism of win or loss streaks that in the original series resulted in over-narratives. The invisible hand of chance.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;So, enough about ranting against time. Let me play devil’s advocate and list some arguments in favour of time:&lt;/p&gt;
 &lt;p&gt;When we do not understand a process, time is often a good proxy for something we are unable to measure. We should try to smooth time to detect trends. I’m a fan of LOESS for its flexibility.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;loess.gif&#34; alt=&#34;LOESS&#34; /&gt; LOESS (image from &lt;a href=&#34;https://simplystatistics.org/2017/08/08/code-for-my-educational-gifs/&#34;&gt;Simply Statistics&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Survival analysis (time to event analysis) is mostly concerned with the rate at which things are moving. Is a certain group reaching an event faster than another group? Survival analysis can effectively deal with survivorship bias.&lt;/p&gt;
 &lt;p&gt;When we introduce a change at a given time point, there are methods that try to deal with it, such as interrupted time series or &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt; (these can go by different names). For an overview, see Kontopantelis. Change point detection is an active area of research.&lt;/p&gt;
 &lt;p&gt;If you are embarking on an analysis, don’t jump on time as your first go-to measure. Think carefully about the problem and try first to identify all factors that may affect a response of interest. Explore those first, plot them against the response, plot them against each other. Try to learn as much about your problem without recurring to time immediately. When you do look at time, remember there are challenges unique to times that complicates things (autocorrelation and censoring to name a couple).&lt;/p&gt;

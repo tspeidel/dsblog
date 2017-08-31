@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alternative Stats</title>
-    <link>/tags.html</link>
+    <link>https://alternative-stats.netlify.com/tags.html</link>
     <description>Recent content in Tags on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,29 +12,38 @@
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic.html</link>
+      <link>https://alternative-stats.netlify.com/tags/academic.html</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/academic.html</guid>
+      <guid>https://alternative-stats.netlify.com/tags/academic.html</guid>
       <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Datascience</title>
-      <link>/tags/datascience.html</link>
-      <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
+      <link>https://alternative-stats.netlify.com/tags/datascience.html</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/datascience.html</guid>
+      <guid>https://alternative-stats.netlify.com/tags/datascience.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rstats</title>
-      <link>/tags/rstats.html</link>
+      <link>https://alternative-stats.netlify.com/tags/rstats.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>/tags/rstats.html</guid>
+      <guid>https://alternative-stats.netlify.com/tags/rstats.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statliteracy</title>
+      <link>https://alternative-stats.netlify.com/tags/statliteracy.html</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/tags/statliteracy.html</guid>
       <description></description>
     </item>
     
