@@ -1,6 +1,5 @@
 +++
-abstract = "Presenting and Using the Results of a Predictive Tool. A history of the edits is available in the history tab of the article:
-http://en.wikipedia.org/w/index.php?title=Predictive_modelling&action=history" 
+abstract = "Presenting and Using the Results of a Predictive Tool" 
 authors = ["T. Speidel et al."]
 date = "2014-02-28"
 image_preview = ""
