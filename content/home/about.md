@@ -36,7 +36,7 @@ I believe that statistical rigour must transcend professional barriers: decision
 <br>
 
 ## Data Science Tools
-With so much of the field facilitated by computational tools, I am humbled to be a long time **R** user. R is an open source statistical programming language that has been around since the mid-70's and is currently enjoying wide popularity. With a rich community, the timing to be doing data science couldn't be better. 
+With so much of the field facilitated by computational tools, I am humbled to be a long time **R** user. R is an open source statistical programming language that has been around since the mid-70's and is currently enjoying wide popularity. With a rich community, the timing to be doing data science couldn't be better. In keeping with the spirit, this blog is entirely built and managed using R and Hugo.
 
 <br>
 
