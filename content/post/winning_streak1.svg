@@ -311,6 +311,15 @@
        apply_no_weight="true"
        apply_with_weight="true"
        only_selected="false" />
+    <clipPath
+       id="clipPath4596-8"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         style="clip-rule:evenodd"
+         inkscape:connector-curvature="0"
+         id="path4594-2"
+         d="M 29,29 H 764 V 1196 H 29 Z" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -319,21 +328,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.82"
-     inkscape:cx="370.279"
-     inkscape:cy="711.46952"
+     inkscape:zoom="0.94"
+     inkscape:cx="502.09345"
+     inkscape:cy="1153.2935"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4588"
+     inkscape:current-layer="g4598"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="769"
-     inkscape:window-height="438"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
      inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata4575">
     <rdf:RDF>
@@ -357,26 +366,35 @@
        id="g4588">
       <g
          id="g4590"
-         transform="translate(-46.527779,877.7778)">
+         transform="translate(-53.858606,375.57414)">
         <g
            clip-path="url(#clipPath4596)"
-           id="g4592">
+           id="g4592"
+           transform="translate(-27.925533)">
           <g
              transform="matrix(0.75,0,0,0.75,76.916668,-309.8889)"
              id="g4598">
             <text
                id="text4646"
                style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="107.4138"
-               y="543.37933"
+               x="141.45636"
+               y="512.5282"
                inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
                inkscape:export-xdpi="117.95737"
                inkscape:export-ydpi="117.95737">
               <tspan
                  id="tspan4644"
                  sodipodi:role="line"
-                 y="543.37933"
-                 x="107.4138">10 random seasons with the same win-loss record, both at home and on the road</tspan>
+                 y="512.5282"
+                 x="141.45636"
+                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.36000001px;writing-mode:lr-tb;text-anchor:start"
+                 dx="0">10 random seasons with the same win-loss record</tspan>
+              <tspan
+                 sodipodi:role="line"
+                 y="562.5282"
+                 x="141.45636"
+                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+                 id="tspan6477">both at home and on the road</tspan>
             </text>
             <text
                id="text4622"
@@ -462,7 +480,8 @@
       <g
          id="g4666"
          inkscape:export-xdpi="93.015327"
-         inkscape:export-ydpi="93.015327">
+         inkscape:export-ydpi="93.015327"
+         transform="translate(27,28.5)">
         <g
            clip-path="url(#clipPath4672)"
            id="g4668">
@@ -2474,6 +2493,161 @@
                id="path5476"
                style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
                d="m 754,294 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5450-5"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 780.9737,390.08641 h 1 v 10 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5452-5"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 780.9737,390.08641 h 1 v 2 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5454-4"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 780.9737,390.08641 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5456-6"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 784.9737,381.08641 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5458-6"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 784.9737,389.08641 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5460-9"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 784.9737,390.08641 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5462-6"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 788.9737,381.08641 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5464-7"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 788.9737,389.08641 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5466-5"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 788.9737,390.08641 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5468-6"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 792.9737,381.08641 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5470-4"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 792.9737,389.08641 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5472-3"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 792.9737,390.08641 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5474-0"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 796.9737,381.08641 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5476-0"
+               style="fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               d="m 796.9737,389.08641 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5444-8"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 793.25941,350.23679 h 1 v 10 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5446-9"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 793.25941,350.23679 h 1 v 2 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5448-7"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 793.25941,350.23679 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5450-8"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 797.25941,350.23679 h 1 v 10 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5452-3"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 797.25941,350.23679 h 1 v 2 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5454-9"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 797.25941,350.23679 h 5.00001 v 1 h -5.00001 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5456-7"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 801.25941,341.23679 h 1.00001 v 9 h -1.00001 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5458-2"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 801.25941,349.23679 h 1.00001 v 1 h -1.00001 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5460-5"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 801.25941,350.23679 h 5.00001 v 1 h -5.00001 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5462-0"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 805.25942,341.23679 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5464-2"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 805.25942,349.23679 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5466-4"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 805.25942,350.23679 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5468-8"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 809.25942,341.23679 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5470-0"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 809.25942,349.23679 h 1 v 1 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5472-6"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 809.25942,350.23679 h 5 v 1 h -5 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5474-2"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 813.25942,341.23679 h 1 v 9 h -1 z" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path5476-6"
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000"
+               d="m 813.25942,349.23679 h 1 v 1 h -1 z" />
           </g>
         </g>
       </g>
@@ -2492,7 +2666,7 @@
       </g>
       <g
          id="g5496"
-         transform="translate(-1.9396552,106.03449)"
+         transform="translate(24.676886,175.11344)"
          inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
          inkscape:export-xdpi="93"
          inkscape:export-ydpi="93">
@@ -4492,7 +4666,7 @@
       </g>
       <g
          id="g6314"
-         transform="translate(-7.1120691,166.1638)"
+         transform="translate(23.451841,171.32921)"
          inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
          inkscape:export-xdpi="93"
          inkscape:export-ydpi="93">
@@ -6517,7 +6691,7 @@
       </g>
       <g
          id="g7142"
-         transform="translate(-7.1120691,238.1638)"
+         transform="translate(24.015751,163.81793)"
          inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
          inkscape:export-xdpi="93"
          inkscape:export-ydpi="93">
@@ -8537,160 +8711,16 @@
       </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 151.24892,254.00086 c 16.14722,18.66312 32.29455,37.32637 48.44182,55.98955"
+         d="m 178.24892,282.50086 c 16.14722,18.66312 32.29455,37.32637 48.44182,55.98955"
          id="path18343"
          inkscape:connector-curvature="0"
          inkscape:path-effect="#path-effect18345"
-         inkscape:original-d="m 151.24892,254.00086 c 16.14779,18.66263 48.44182,55.98955 48.44182,55.98955"
+         inkscape:original-d="m 178.24892,282.50086 c 16.14779,18.66263 48.44182,55.98955 48.44182,55.98955"
          inkscape:export-xdpi="93.015327"
          inkscape:export-ydpi="93.015327" />
       <g
-         id="g5478-0"
-         transform="translate(-287.58515,299.81813)"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93">
-        <g
-           clip-path="url(#clipPath5484-1)"
-           id="g5480-0">
-          <g
-             transform="matrix(0.75,0,0,0.75,29,29)"
-             id="g5486-3">
-            <text
-               id="text5490-0"
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="606.96552"
-               y="275.34482">
-              <tspan
-                 id="tspan5488-6"
-                 sodipodi:role="line"
-                 y="275.34482"
-                 x="606.96552">Longest winning streak:</tspan>
-            </text>
-            <text
-               id="text5494-0"
-               style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="608.13257"
-               y="288.79309">
-              <tspan
-                 id="tspan5492-6"
-                 sodipodi:role="line"
-                 y="288.79309"
-                 x="608.13257"
-                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">11 games</tspan>
-            </text>
-          </g>
-        </g>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.24999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 145.56034,466.53449 c 16.14722,18.66312 32.29455,37.32637 48.44182,55.98955"
-         id="path18343-2"
-         inkscape:connector-curvature="0"
-         inkscape:path-effect="#path-effect18345-2"
-         inkscape:original-d="m 145.56034,466.53449 c 16.14779,18.66263 48.44182,55.98955 48.44182,55.98955"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93" />
-      <g
-         id="g5478-7"
-         transform="translate(-47.3969,405.73061)"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93">
-        <g
-           clip-path="url(#clipPath5484-0)"
-           id="g5480-9">
-          <g
-             transform="matrix(0.75,0,0,0.75,29,29)"
-             id="g5486-4">
-            <text
-               id="text5490-7"
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="606.96552"
-               y="275.34482">
-              <tspan
-                 id="tspan5488-7"
-                 sodipodi:role="line"
-                 y="275.34482"
-                 x="606.96552">Longest winning streak:</tspan>
-            </text>
-            <text
-               id="text5494-9"
-               style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="608.13257"
-               y="288.79309">
-              <tspan
-                 id="tspan5492-7"
-                 sodipodi:role="line"
-                 y="288.79309"
-                 x="608.13257"
-                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">11 games</tspan>
-            </text>
-          </g>
-        </g>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.24999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 385.74859,572.44698 c 16.14722,18.66312 32.29455,37.32637 48.44182,55.98955"
-         id="path18343-6"
-         inkscape:connector-curvature="0"
-         inkscape:path-effect="#path-effect18345-6"
-         inkscape:original-d="m 385.74859,572.44698 c 16.14779,18.66263 48.44182,55.98955 48.44182,55.98955"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93" />
-      <g
-         id="g5478-5"
-         transform="translate(-201.27621,520.17027)"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93">
-        <g
-           clip-path="url(#clipPath5484-00)"
-           id="g5480-6">
-          <g
-             transform="matrix(0.75,0,0,0.75,29,29)"
-             id="g5486-1">
-            <text
-               id="text5490-79"
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="606.96552"
-               y="275.34482">
-              <tspan
-                 id="tspan5488-9"
-                 sodipodi:role="line"
-                 y="275.34482"
-                 x="606.96552">Longest winning streak:</tspan>
-            </text>
-            <text
-               id="text5494-91"
-               style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               x="608.13257"
-               y="288.79309">
-              <tspan
-                 id="tspan5492-2"
-                 sodipodi:role="line"
-                 y="288.79309"
-                 x="608.13257"
-                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">10 games</tspan>
-            </text>
-          </g>
-        </g>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.24999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 231.86928,686.88664 c 16.14722,18.66312 32.29455,37.32637 48.44182,55.98955"
-         id="path18343-4"
-         inkscape:connector-curvature="0"
-         inkscape:path-effect="#path-effect18345-9"
-         inkscape:original-d="m 231.86928,686.88664 c 16.14779,18.66263 48.44182,55.98955 48.44182,55.98955"
-         inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
-         inkscape:export-xdpi="93"
-         inkscape:export-ydpi="93" />
-      <g
          id="g5478-02"
-         transform="translate(-279.82028,83.725813)"
+         transform="translate(-252.82028,112.22581)"
          inkscape:export-xdpi="93.015327"
          inkscape:export-ydpi="93.015327">
         <g
@@ -8708,30 +8738,31 @@
                  id="tspan5488-0"
                  sodipodi:role="line"
                  y="275.34482"
-                 x="606.96552">Longest winning streak:</tspan>
+                 x="606.96552"
+                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:17.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">Longest winning streak:</tspan>
             </text>
             <text
                id="text5494-3"
                style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
                x="608.13257"
-               y="288.79309">
+               y="292.79309">
               <tspan
                  id="tspan5492-5"
                  sodipodi:role="line"
-                 y="288.79309"
+                 y="292.79309"
                  x="608.13257"
-                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">11 games</tspan>
+                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.33333397px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">11 games</tspan>
             </text>
           </g>
         </g>
       </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.24017347;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 467.52543,180.91211 C 455.09225,203.2818 442.6587,225.65217 430.22534,248.0222"
+         d="M 494.52543,209.41211 C 482.09225,231.7818 469.6587,254.15217 457.22534,276.5222"
          id="path18343-5"
          inkscape:connector-curvature="0"
          inkscape:path-effect="#path-effect18345-90"
-         inkscape:original-d="m 467.52543,180.91211 c -12.43376,22.36937 -37.30009,67.11009 -37.30009,67.11009"
+         inkscape:original-d="m 494.52543,209.41211 c -12.43376,22.36937 -37.30009,67.11009 -37.30009,67.11009"
          inkscape:export-xdpi="93.015327"
          inkscape:export-ydpi="93.015327" />
       <flowRoot
@@ -8748,26 +8779,137 @@
            id="flowPara6297">When</flowPara></flowRoot>      <text
          xml:space="preserve"
          style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9px;line-height:125%;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="474.46988"
-         y="165.63434"
+         x="353.29916"
+         y="175.84166"
          id="text6301"
          inkscape:export-xdpi="93.015327"
          inkscape:export-ydpi="93.015327"><tspan
            sodipodi:role="line"
            id="tspan6299"
-           x="474.46988"
-           y="165.63434"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px">&quot;When we kicked the ball out of bounds twice in the </tspan><tspan
+           x="353.29916"
+           y="175.84166"
+           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px">&quot;When we kicked the ball out of bounds twice in the </tspan><tspan
            sodipodi:role="line"
-           x="474.46988"
-           y="176.88434"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px"
+           x="353.29916"
+           y="188.2971"
+           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px"
            id="tspan6303">first minute, that was the beginning of the end, we </tspan><tspan
            sodipodi:role="line"
-           x="474.46988"
-           y="188.13434"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px"
+           x="353.29916"
+           y="200.75256"
+           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75px"
            id="tspan6305">lost all momentum and never caught up...blah blah.&quot;</tspan></text>
+      <g
+         id="g4590-0"
+         transform="translate(-56.621095,-10.90805)">
+        <g
+           clip-path="url(#clipPath4596-8)"
+           id="g4592-2">
+          <g
+             transform="matrix(0.75,0,0,0.75,76.916668,-309.8889)"
+             id="g4598-4">
+            <text
+               id="text4646-9"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="103.15849"
+               y="499.7623"
+               inkscape:export-filename="F:\GoogleDrive\dsblog\GitHub\blogdown_source\static\img\one-common-mistake-data-analysts-make-and-how-to-avoid-it\winning_streak_2.png"
+               inkscape:export-xdpi="117.95737"
+               inkscape:export-ydpi="117.95737">
+              <tspan
+                 sodipodi:role="line"
+                 y="499.7623"
+                 x="103.15849"
+                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+                 id="tspan6471">2009 Boston Red Sox win – loss record 95 – 67</tspan>
+              <tspan
+                 sodipodi:role="line"
+                 y="553.09564"
+                 x="103.15849"
+                 style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#d40000"
+                 id="tspan6475">winning streaks of 4 or more games</tspan>
+            </text>
+            <text
+               id="text4622-1"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="110.38098"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4620-5"
+                 sodipodi:role="line"
+                 y="237.30646"
+                 x="110.38098">2009 Boston Red Sox win</tspan>
+            </text>
+            <text
+               id="text4626-6"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="295.64661"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4624-4"
+                 y="237.30646"
+                 x="295.64661"
+                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">–</tspan>
+            </text>
+            <text
+               id="text4630-6"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="304.89661"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4628-8"
+                 sodipodi:role="line"
+                 y="237.30646"
+                 x="304.89661">loss record, 95</tspan>
+            </text>
+            <text
+               id="text4634-6"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="415.89658"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4632-3"
+                 y="237.30646"
+                 x="415.89658"
+                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">–</tspan>
+            </text>
+            <text
+               id="text4638-5"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="425.14658"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4636-7"
+                 sodipodi:role="line"
+                 y="237.30646"
+                 x="425.14658">67,</tspan>
+            </text>
+            <text
+               id="text4642-4"
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:18.66666794px;font-family:Delicious;-inkscape-font-specification:'Delicious, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="449.14658"
+               y="237.30646"
+               inkscape:export-xdpi="119.20405"
+               inkscape:export-ydpi="119.20405">
+              <tspan
+                 id="tspan4640-2"
+                 sodipodi:role="line"
+                 y="237.30646"
+                 x="449.14658">winning streaks of 4 or more games</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
     </g>
   </g>
 </svg>
