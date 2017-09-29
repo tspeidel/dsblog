@@ -23,7 +23,7 @@ knitr::opts_chunk$set(dev = 'CairoPNG',
                       fig.path = 'Figures/', 
                       strip.white = TRUE, 
                       dpi = 144)
-
+ 
 knitr::opts_knit$set(eval.after = 'fig.cap')
 
 knitr::knit_hooks$set(inline = function(x) {
