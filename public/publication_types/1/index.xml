@@ -2,22 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1 on Alternative Stats</title>
-    <link>/publication_types/1/</link>
+    <link>https://alternative-stats.netlify.com/publication_types/1.html</link>
     <description>Recent content in 1 on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Thomas Speidel</copyright>
-    <lastBuildDate>Wed, 01 Apr 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/1/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication_types/1.html" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Glycemic load and endometrial cancer risk</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <title>10 Analytics Strategy Tips</title>
+      <link>https://alternative-stats.netlify.com/publication/10_analytics_strategy_tips.html</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>https://alternative-stats.netlify.com/publication/10_analytics_strategy_tips.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promoting Analytics in the Energy Industry</title>
+      <link>https://alternative-stats.netlify.com/publication/promoting_analytics_in_energy.html</link>
+      <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/publication/promoting_analytics_in_energy.html</guid>
+      <description></description>
     </item>
     
   </channel>

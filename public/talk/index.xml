@@ -11,11 +11,21 @@
     <atom:link href="/talk.html" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Example Talk</title>
-      <link>https://alternative-stats.netlify.com/talk/example-talk.html</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <title>10 Analytics Strategy Tips</title>
+      <link>https://alternative-stats.netlify.com/talk/10_analytics_strategy_tips.html</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/talk/example-talk.html</guid>
+      <guid>https://alternative-stats.netlify.com/talk/10_analytics_strategy_tips.html</guid>
+      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Promoting Analytics in the Energy Industry</title>
+      <link>https://alternative-stats.netlify.com/talk/boston_2014.html</link>
+      <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/talk/boston_2014.html</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>

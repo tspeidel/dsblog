@@ -1,0 +1,241 @@
+---
+title: The Flight Dataset
+author: Thomas Speidel
+date: '2017-09-28'
+slug: the-flight-dataset
+categories: []
+tags:
+  - rstats
+---
+
+As I build this blog, I've been looking for expressive datasets to illustrate ideas and examples. For data management, I found the U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics delays and cancellation dataset. This dataset is available from [Kaggle](https://www.kaggle.com/usdot/flight-delays), or directly from DOT. You can find all the R code in my [gitHub](https://github.com/tspeidel/dsblog/tree/master/content/post) repo.
+
+
+
+```{r, echo=FALSE, tidy=TRUE, results='hide', message=FALSE, warning=FALSE, cache=FALSE}
+#-----------------------------------------------------------------------------------------#
+# Set knitr options
+#-----------------------------------------------------------------------------------------#
+knitr::opts_chunk$set(dev = 'CairoPNG',
+                      echo = FALSE, 
+                      warning=FALSE, 
+                      message=FALSE, 
+                      fig.path = 'Figures/', 
+                      strip.white = TRUE, 
+                      dpi = 144)
+
+knitr::opts_knit$set(eval.after = 'fig.cap')
+
+knitr::knit_hooks$set(inline = function(x) {
+      if(is.numeric(x)){
+          return(prettyNum(x, big.mark=","))
+      }else{
+          return(x)
+       }
+   })
+
+##----------------------------------------------------------------------------------------------------------------------
+## LOAD PACKAGES
+##----------------------------------------------------------------------------------------------------------------------
+library(downloader)
+library(lubridate)
+library(dplyr)
+library(htmlwidgets)
+library(htmltools)
+library(DT)
+library(Cairo)
+library(R.utils)
+library(scales)
+library(viridis)
+library(extrafont)
+library(knitr)
+library(tidyr)
+library(readr)
+library(extrafont)
+library(gridExtra)
+library(ggplot2)
+library(plotly)
+library(Hmisc)
+library(rms)
+library(grid)
+library(svglite)
+library(httr)
+library(RCurl)
+library(forcats)
+library(plotly)
+library(knitr)
+library(kableExtra)
+
+
+##----------------------------------------------------------------------------------------------------------------------
+## FONTS
+##----------------------------------------------------------------------------------------------------------------------
+# font_import(pattern="[O/o]swald")
+
+```
+
+
+```{r, cache=FALSE, eval = FALSE}
+##----------------------------------------------------------------------------------------------------------------------
+## DOWNLOAD KAGGLE AVIATION DATA
+##----------------------------------------------------------------------------------------------------------------------
+## Scrape zip file
+loginurl = "https://www.kaggle.com/account/login"
+dataurl  = "https://www.kaggle.com/usdot/flight-delays/downloads/flights.csv"
+
+pars=list(
+  UserName="",
+  Password=""
+)
+agent="Mozilla/5.0"
+
+curl = getCurlHandle()
+curlSetOpt(cookiejar="cookies.txt",  useragent = agent, followlocation = TRUE, curl=curl)
+welcome=postForm(loginurl, .params = pars, curl=curl)
+
+bdown=function(url, file, curl){
+  f = CFILE(file, mode="wb")
+  curlPerform(url = url, writedata = f@ref, noprogress = FALSE, curl = curl)
+  close(f)
+}
+
+ret = bdown(dataurl, "Data/flights.zip", curl)
+
+rm(curl)
+gc()
+
+
+## unzip
+unzip ("Data/flights.zip", exdir = "Data")
+```
+
+
+
+```{r, cache=FALSE}
+## Data
+flights <- read_csv("/home/tspeidel/GoogleDrive/dsblog/GitHub/dsblog/content/post/Data/flights.csv")
+
+## Make friendlier col names
+var.names <- tolower(colnames(flights))
+var.names <- make.names(var.names, unique = TRUE, allow_ = FALSE)
+colnames(flights) <- var.names
+
+kable(flights[1:5, 1:10], "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+The dataset contains `r nrow(flights)` rows and `r length(flights)`. Here's a quick visualization of origin and destination pairs by the number of flights.
+
+<br><br>
+
+
+```{r, fig.height=10, fig.width=14, fig.retina=TRUE}
+##----------------------------------------------------------------------------------------------------------------------
+## DATA PREP
+##----------------------------------------------------------------------------------------------------------------------
+## Remove diverted, cancelled to simplify
+flights <- flights %>%
+     filter(cancelled==0) %>%
+     filter(diverted==0) %>%
+     select(-cancelled, -diverted)
+
+
+## Extract departure and arrival hour
+flights2 <- flights %>%
+     separate(scheduled.departure, c("dep.hr", "dep.min"), sep = 2) %>%
+     separate(arrival.time, c("arr.hr", "arr.min"), sep = 2) %>%
+     mutate(dep.sched = make_datetime(year, month, day, dep.hr, dep.min)) %>%
+     mutate(arr.act = make_datetime(year, month, day, arr.hr, arr.min)) %>%
+     mutate(dep.sched.hr = as.factor(hour(dep.sched))) %>%
+     mutate(arr.act.hr = as.factor(hour(arr.act))) %>%
+     mutate(month = as.factor(month),
+            day = as.factor(day),
+            day.of.week = as.factor(day.of.week),
+            airline = as.factor(airline),
+            destination.airport = as.factor(destination.airport)) %>%
+     select(-year,
+            -cancellation.reason)
+
+## Focus on top airports
+flights2 <- flights2 %>%     
+     mutate(origin.airport = fct_lump(origin.airport, 50),
+            destination.airport = fct_lump(destination.airport, 50)) %>%
+     filter(origin.airport != "Other") %>%
+     filter(destination.airport != "Other") %>%
+     filter(origin.airport != "10397") %>%
+     filter(origin.airport != "13930") %>%
+     filter(destination.airport != "10397") %>%
+     filter(destination.airport != "13930") %>%
+     mutate(origin.airport = fct_drop(origin.airport)) %>%
+     mutate(destination.airport = fct_drop(destination.airport))
+
+## For negative delays, set to 0
+flights2 <- mutate(flights2, arrival.delay = ifelse(arrival.delay < 0, 0, arrival.delay))
+    
+
+## By departure
+byairport <- flights2 %>%
+     group_by(origin.airport, destination.airport) %>%
+     summarise(n = n(),
+               arrival.delay.p25 = quantile(arrival.delay, probs=0.25),
+               arrival.delay.p50 = quantile(arrival.delay, probs=0.50),
+               arrival.delay.mean = mean(arrival.delay, na.rm = TRUE),
+               arrival.delay.p75 = quantile(arrival.delay, probs=0.75)) %>%
+     ungroup() %>%
+     mutate(origin.airport = fct_reorder(origin.airport, n, .desc = TRUE)) %>%
+     arrange(desc(n))
+
+both <- union(levels(byairport$origin.airport), levels(byairport$destination.airport))
+
+byairport <- byairport %>%
+     mutate(origin.airport = factor(origin.airport, levels = both),
+            destination.airport = factor(destination.airport, levels = both))
+
+color.count = length(unique(byairport$origin.airport))
+pal <- rev(viridis_pal()(color.count))
+
+
+## Plot
+ggplot(byairport, aes(destination.airport, origin.airport)) +
+     geom_tile(aes(fill = n), na.rm = TRUE, colour = "white", size = 0.4) + 
+     scale_fill_viridis(option = "C", begin = 0, end = 1, direction = -1) + 
+     scale_x_discrete(expand = c(0, 0)) +
+     scale_y_discrete(expand = c(0, 0)) + 
+     theme_minimal() +
+     theme(legend.position="none") +
+     labs(x = "Origin Airport",
+          y = "Destination Airport",
+          title = "Number of Flights Between Airports in 2015",
+          subtitle = "The most popular route in 2015 was SFO to LAX with 13,400 flights, while the return LAX to SFO had 13,109. JFK to LAX had 11,853\n flights (11,851 for the return). An average route was DFW to SMF with 1,301 flights. White squares indicate there were no flights in \n2015 between the two airports.",
+          fill = "Count",
+          caption = "Source: U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics 2015") +
+     theme_minimal() +
+     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
+     theme(plot.title = element_text(face = "bold", hjust = 0.012, vjust = 0.8, colour = "#3C3C3C", size = 28, family = "Oswald")) +
+     theme(plot.subtitle = element_text(hjust = 0.012, vjust = 0.8, colour = "#3C3C3C", margin = margin(0, 0, 20, 0), size = 14, family = "Oswald Light")) +
+     theme(plot.caption = element_text(size = 12, family = "Oswald Light")) +
+     theme(axis.title = element_text()) +
+     theme(axis.title.y = element_text(size = 13, angle = 90, family = "Oswald Light")) +
+     theme(axis.title.x = element_text(size = 13, angle = 0, family = "Oswald Light")) +
+     theme(axis.text.x = element_text(size = 10, family = "Oswald Light")) +
+     theme(axis.text.y = element_text(size = 10, family = "Oswald Light")) +
+     theme(legend.text = element_text(size = 10, family = "Oswald Light")) +
+     theme(legend.title = element_text(size = 12, family = "Oswald Light")) +
+     guides(color = guide_legend(ncol = 1))
+
+
+# plot_ly(
+#     x = bydeparture$origin.airport, 
+#     y = bydeparture$destination.airport,
+#     z = bydeparture$n, 
+#     type = "heatmap",
+#     colors = pal)
+
+```
+
+
+
+
+
+     
+

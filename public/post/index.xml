@@ -11,6 +11,216 @@
     <atom:link href="/post.html" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The Flight Dataset</title>
+      <link>https://alternative-stats.netlify.com/post/the-flight-dataset.html</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/the-flight-dataset.html</guid>
+      <description>&lt;p&gt;As I build this blog, I’ve been looking for expressive datasets to illustrate ideas and examples. For data management, I found the U.S. Department of Transportation’s (DOT) Bureau of Transportation Statistics delays and cancellation dataset. This dataset is available from &lt;a href=&#34;https://www.kaggle.com/usdot/flight-delays&#34;&gt;Kaggle&lt;/a&gt;, or directly from DOT. You can find all the R code in my &lt;a href=&#34;https://github.com/tspeidel/dsblog/tree/master/content/post&#34;&gt;gitHub&lt;/a&gt; repo.&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+year
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+month
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+day
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+day.of.week
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+airline
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+flight.number
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+tail.number
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+origin.airport
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+destination.airport
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+scheduled.departure
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+98
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+N407AS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ANC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SEA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0005
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2336
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+N3KUAA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+LAX
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+PBI
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0010
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+US
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+840
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+N171US
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SFO
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+CLT
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0020
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+258
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+N3HYAA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+LAX
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+MIA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0020
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+135
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+N527AS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SEA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ANC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0025
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The dataset contains 5,819,079 rows and 31.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Figures/unnamed-chunk-4-1.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
       <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
