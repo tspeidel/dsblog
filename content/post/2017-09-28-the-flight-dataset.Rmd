@@ -8,7 +8,9 @@ tags:
   - rstats
 ---
 
-As I build this blog, I've been looking for expressive datasets to illustrate ideas and examples. For data management, I found the U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics delays and cancellation dataset. This dataset is available from [Kaggle](https://www.kaggle.com/usdot/flight-delays), or directly from DOT. You can find all the R code in my [gitHub](https://github.com/tspeidel/dsblog/tree/master/content/post) repo.
+As I build this blog, I've been looking for expressive datasets to illustrate ideas and examples. For data management, I found the U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics delays and cancellation dataset appealing for two reasons: first, it contains a good mixture of variable types (date and time, categorical and numerical); recond, on a personal level, I've always been interested in aviation. 
+
+This dataset is available from [Kaggle](https://www.kaggle.com/usdot/flight-delays), or directly from DOT. You can find all the R code in my [gitHub](https://github.com/tspeidel/dsblog/tree/master/content/post) repo.
 
 
 
@@ -113,7 +115,7 @@ unzip ("Data/flights.zip", exdir = "Data")
 
 ```{r, cache=FALSE}
 ## Data
-flights <- read_csv("/home/tspeidel/GoogleDrive/dsblog/GitHub/dsblog/content/post/Data/flights.csv")
+flights <- read_csv("/home/tspeidel/GoogleDrive/Personal_Work/R_Reports/Analysis/Data/flights.csv")
 
 ## Make friendlier col names
 var.names <- tolower(colnames(flights))
