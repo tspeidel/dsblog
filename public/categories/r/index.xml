@@ -7,8 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Thomas Speidel</copyright>
-    <lastBuildDate>Fri, 30 Dec 2016 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/r.html" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I built this blog using R</title>
+      <link>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</guid>
+      <description>&lt;p&gt;Just a few notes for those wondering how I built this site. I’m utilizing R with Yahui’s fantastic package &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;blogdown_win.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Blogdown utilizes &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; which is a website generator: it compiles a bunch of files so that they can be served in a website. The nice thing about Hugo is that being open source, it has a large community that contribute themes and plugins.&lt;/p&gt;
+&lt;p&gt;While Hugo has many themes to choose from, I’ve had difficulties finding one that work well with blogdown. In the end, I’ve settled for the popular Academic.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;hugo_themes.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;While the blog is managed in R, the files are uoloaded in my GitHub repo. I tried to host the site in GitHub but I found it too cumbersome requiring too many workarounds. Yihui suggested I try &lt;a href=&#34;https://www.netlify.com/&#34;&gt;Netlify&lt;/a&gt;. I must say that was great advise because it has been a smooth ride: just link Netlify to your GitHub repo, change a couple of settings in Netlify and off you go.&lt;/p&gt;
+&lt;p&gt;The next phase is to migrate to an RStudio server version I have running on DigitalOcean so that I can publish from anywhere I have internet access. &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; is a friendly, easy to use VPS. I’ve had RStudio server running on their systems for about 2 years now. If you want to give it a try, click the link below.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/63128d4ca243&#34;&gt;&lt;img src=&#34;do.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;If you want to create your own blog in R, here are some good references:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; class=&#34;uri&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/&#34; class=&#34;uri&#34;&gt;http://livefreeordichotomize.com/2017/07/13/introducing-the-tuftesque-blogdown-theme/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://livefreeordichotomize.com/2017/08/08/how-to-make-an-rmarkdown-website/&#34; class=&#34;uri&#34;&gt;http://livefreeordichotomize.com/2017/08/08/how-to-make-an-rmarkdown-website/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
