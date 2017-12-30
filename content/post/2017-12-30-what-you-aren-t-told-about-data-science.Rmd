@@ -1,14 +1,16 @@
 ---
-title: What You Aren't Told About Data Science
+title: What You Aren’t Told About Data Science
 author: Thomas Speidel
 date: '2017-12-30'
 slug: what-you-aren-t-told-about-data-science
 categories:
-  - data analysis
+  - critical thinking
   - statistical literacy
 tags:
   - datascience
+  - statliteracy
 ---
+
 
  <img src="scrubbing.jpg" height="200px" width="700px" />
 
@@ -144,7 +146,7 @@ Both Ilyas and Mimno highlight one aspect of doing data analysis data scientists
 # Can Data Preparation Be Automated?
 In my view, the short answer is no. Attempts to automate this tedious and time consuming task have largely failed because we do not know how to address the underlying problem. This does not mean that attempts at *facilitating* data preparation tasks have failed. On the contrary, there has been progress in this area. In a [recent Data Skeptic podcast](file:///home/tspeidel/GoogleDrive/dsblog/GitHub/dsblog/content/post/2017-12-30-what-you-aren-t-told-about-data-science.html), Microsoft's Joseph Sirosh reports that:
 
->    Building on the latest research in program synthesis (PROSE) and data cleaning, Microsoft created a data wrangling technology that can drastically reduce the time that data scientists have to spend in coding and transforming data for machine learning. The way program synthesis works are, you give an input, the kind of data you want to wrangle, and the output you want to transform to, so you control the before and after. 
+>    Building on the latest research in program synthesis (PROSE) and data cleaning, Microsoft created a data wrangling technology that can drastically reduce the time that data scientists have to spend in coding and transforming data for machine learning. The way program synthesis works are, you give an input, the kind of data you want to wrangle, and the output you want to transform to, so you control the before and after.
 
 I have not looked into these tools. Nonetheless, this seems significantly more tractable than auto-magically "*finding, cleaning and blending data so that it is ready to be analyzed*". A search in the academic literature reveals this to be an [active area of research](https://scholar.google.ca/scholar?q=program+synthesis+%28PROSE%29+data+transformations&hl=en&as_sdt=0%2C5&as_vis=1&as_ylo=2015&as_yhi=).
 
