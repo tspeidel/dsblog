@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on Alternative Stats</title>
-    <link>https://alternative-stats.netlify.com/publication_types.html</link>
+    <link>/publication_types.html</link>
     <description>Recent content in Publication_types on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,28 +12,28 @@
     
     <item>
       <title>1</title>
-      <link>https://alternative-stats.netlify.com/publication_types/1.html</link>
+      <link>/publication_types/1.html</link>
       <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication_types/1.html</guid>
+      <guid>/publication_types/1.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2</title>
-      <link>https://alternative-stats.netlify.com/publication_types/2.html</link>
+      <link>/publication_types/2.html</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication_types/2.html</guid>
+      <guid>/publication_types/2.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4</title>
-      <link>https://alternative-stats.netlify.com/publication_types/4.html</link>
+      <link>/publication_types/4.html</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication_types/4.html</guid>
+      <guid>/publication_types/4.html</guid>
       <description></description>
     </item>
     

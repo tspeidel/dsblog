@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Alternative Stats</title>
-    <link>https://alternative-stats.netlify.com/categories/r.html</link>
+    <link>/categories/r.html</link>
     <description>Recent content in R on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>I built this blog using R</title>
-      <link>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</link>
+      <link>/post/i-built-this-blog-using-r.html</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</guid>
+      <guid>/post/i-built-this-blog-using-r.html</guid>
       <description>&lt;p&gt;Just a few notes for those wondering how I built this site. I’m utilizing R with Yahui’s fantastic package &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
@@ -46,10 +46,10 @@
     
     <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
-      <link>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</link>
+      <link>/post/2015-07-23-r-rmarkdown.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</guid>
+      <guid>/post/2015-07-23-r-rmarkdown.html</guid>
       <description>&lt;div id=&#34;user-2016&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;useR! 2016&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;stanford.jpg&#34; /&gt; The &lt;a href=&#34;http://user2016.org/&#34;&gt;useR! conference&lt;/a&gt; in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level &lt;a href=&#34;http://user2016.org/#sponsors&#34;&gt;sponsors&lt;/a&gt;. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:&lt;/p&gt;

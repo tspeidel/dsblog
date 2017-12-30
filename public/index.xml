@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alternative Stats on Alternative Stats</title>
-    <link>https://alternative-stats.netlify.com/</link>
+    <link>/</link>
     <description>Recent content in Alternative Stats on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>What You Aren&#39;t Told About Data Science</title>
-      <link>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</link>
+      <link>/post/what-you-aren-t-told-about-data-science.html</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</guid>
+      <guid>/post/what-you-aren-t-told-about-data-science.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;scrubbing.jpg&#34; height=&#34;200px&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: “&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192&#34;&gt;Can Data Cleaning be automated?&lt;/a&gt;”. It reminded and enticed me to complete the post.&lt;/p&gt;
@@ -403,10 +403,10 @@ NA
     
     <item>
       <title>I built this blog using R</title>
-      <link>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</link>
+      <link>/post/i-built-this-blog-using-r.html</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/i-built-this-blog-using-r.html</guid>
+      <guid>/post/i-built-this-blog-using-r.html</guid>
       <description>&lt;p&gt;Just a few notes for those wondering how I built this site. I’m utilizing R with Yahui’s fantastic package &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
@@ -437,10 +437,10 @@ NA
     
     <item>
       <title>The Flight Dataset</title>
-      <link>https://alternative-stats.netlify.com/post/the-flight-dataset.html</link>
+      <link>/post/the-flight-dataset.html</link>
       <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/the-flight-dataset.html</guid>
+      <guid>/post/the-flight-dataset.html</guid>
       <description>&lt;p&gt;As I build this blog, I’ve been looking for expressive datasets to illustrate ideas and examples. For data management, I found the U.S. Department of Transportation’s (DOT) Bureau of Transportation Statistics delays and cancellation dataset appealing for two reasons: first, it contains a good mixture of variable types (date and time, categorical and numerical); recond, on a personal level, I’ve always been interested in aviation.&lt;/p&gt;
 &lt;p&gt;This dataset is available from &lt;a href=&#34;https://www.kaggle.com/usdot/flight-delays&#34;&gt;Kaggle&lt;/a&gt;, or directly from DOT. You can find all the R code in my &lt;a href=&#34;https://github.com/tspeidel/dsblog/tree/master/content/post&#34;&gt;gitHub&lt;/a&gt; repo.&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
@@ -649,10 +649,10 @@ ANC
     
     <item>
       <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
-      <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
+      <link>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
+      <guid>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
       <description>&lt;p&gt;The best past of my job is that, as &lt;a href=&#34;http://www.nytimes.com/2000/07/28/us/john-tukey-85-statistician-coined-the-word-software.html?mcubz=0&#34;&gt;John Tukey&lt;/a&gt; famously said, &lt;strong&gt;I get to play in everyone’ sandbox&lt;/strong&gt;. It also brings positive unintended ramifications: we get to cross-pollinate fields. Perhaps, none of this is clearer than how biostatistics helps with &lt;a href=&#34;http://press.anu.edu.au/node/162/download&#34;&gt;policing serious crime in Australia&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;policing_resious_crime.jpg&#34; /&gt;
@@ -708,10 +708,10 @@ ANC
     
     <item>
       <title>10 Big Data Myths</title>
-      <link>https://alternative-stats.netlify.com/post/10-big-data-myths.html</link>
+      <link>/post/10-big-data-myths.html</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/10-big-data-myths.html</guid>
+      <guid>/post/10-big-data-myths.html</guid>
       <description>&lt;p&gt;Everyone seems to like top-10 lists and many organizations are interested in Big Data, so it seems timely to write my own top 10 list on Big Data. A premise is warranted. Those who know me, know how much I ditest the term “Big Data”. Yet, for good or worse, Big Data is here to stay and so it’s important that we try clarify what it is and it isn’t.&lt;/p&gt;
 &lt;p&gt;see &lt;a href=&#34;https://dzone.com/articles/10-big-data-myths-exploded&#34; class=&#34;uri&#34;&gt;https://dzone.com/articles/10-big-data-myths-exploded&lt;/a&gt; Gartner: &lt;a href=&#34;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&#34; class=&#34;uri&#34;&gt;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&lt;/a&gt; Diego slides: &lt;a href=&#34;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&#34; class=&#34;uri&#34;&gt;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&lt;/a&gt; &lt;a href=&#34;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&#34; class=&#34;uri&#34;&gt;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&lt;/a&gt; &lt;a href=&#34;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&#34; class=&#34;uri&#34;&gt;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;what-is-big-data&#34; class=&#34;section level2&#34;&gt;
@@ -746,10 +746,10 @@ ANC
     
     <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
-      <link>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</link>
+      <link>/post/2015-07-23-r-rmarkdown.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</guid>
+      <guid>/post/2015-07-23-r-rmarkdown.html</guid>
       <description>&lt;div id=&#34;user-2016&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;useR! 2016&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;stanford.jpg&#34; /&gt; The &lt;a href=&#34;http://user2016.org/&#34;&gt;useR! conference&lt;/a&gt; in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level &lt;a href=&#34;http://user2016.org/#sponsors&#34;&gt;sponsors&lt;/a&gt;. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:&lt;/p&gt;
@@ -850,19 +850,19 @@ ANC
     
     <item>
       <title>Comply or Explain: Advancing Corporate Diversification in Canada</title>
-      <link>https://alternative-stats.netlify.com/publication/comply_or_explain.html</link>
+      <link>/publication/comply_or_explain.html</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/comply_or_explain.html</guid>
+      <guid>/publication/comply_or_explain.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>One Common Mistake Data Analysts Make and How to Avoid It</title>
-      <link>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
+      <link>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
+      <guid>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
       <description>&lt;p&gt;One common mistake inexperienced analyst do in analysing data is that of &lt;strong&gt;assigning a special role to time&lt;/strong&gt;. In my line of work, I see this a lot. Signs of &lt;em&gt;chronophrenia&lt;/em&gt;, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.&lt;/p&gt;
 &lt;p&gt;Don’t get me wrong, I think there are plenty of scenarios when looking at time makes perfect sense and both the statistical, engineering and econometric literature continue to make substantial contributions to this area (I can think of &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Kalman_filter&#34;&gt;Kalman filters&lt;/a&gt; and &lt;a href=&#34;http://www.springer.com/cda/content/document/cda_downloaddocument/9780387772370-c1.pdf?SGWID=0-0-45-771009-p173891512&#34;&gt;Bayesian/Dynamic time series&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Often the analyst attempts to visually assess whether a &lt;strong&gt;shift in time exists&lt;/strong&gt;. The hope is that the shift can be tied to a special cause known to the analyst (for instance a change that was introduced at known point in time) and that this would represent evidence in favour or against a hypothesis.&lt;/p&gt;
@@ -896,56 +896,56 @@ ANC
     
     <item>
       <title>The Perils of Data Story Telling: The Virtues of Data Documentaries</title>
-      <link>https://alternative-stats.netlify.com/publication/perils_of_data_stories.html</link>
+      <link>/publication/perils_of_data_stories.html</link>
       <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/perils_of_data_stories.html</guid>
+      <guid>/publication/perils_of_data_stories.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Glycemic load and endometrial cancer risk in a case-control study of Canadian women</title>
-      <link>https://alternative-stats.netlify.com/publication/glycemic_load.html</link>
+      <link>/publication/glycemic_load.html</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/glycemic_load.html</guid>
+      <guid>/publication/glycemic_load.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ask the Data Scientist</title>
-      <link>https://alternative-stats.netlify.com/publication/ask_data_scientist.html</link>
+      <link>/publication/ask_data_scientist.html</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/ask_data_scientist.html</guid>
+      <guid>/publication/ask_data_scientist.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>10 Analytics Strategy Tips</title>
-      <link>https://alternative-stats.netlify.com/publication/10_analytics_strategy_tips.html</link>
+      <link>/publication/10_analytics_strategy_tips.html</link>
       <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/10_analytics_strategy_tips.html</guid>
+      <guid>/publication/10_analytics_strategy_tips.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>10 Analytics Strategy Tips</title>
-      <link>https://alternative-stats.netlify.com/talk/10_analytics_strategy_tips.html</link>
+      <link>/talk/10_analytics_strategy_tips.html</link>
       <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/talk/10_analytics_strategy_tips.html</guid>
+      <guid>/talk/10_analytics_strategy_tips.html</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Time to Embrace a New Identity?</title>
-      <link>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</link>
+      <link>/post/time-to-embrace-a-new-identity.html</link>
       <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</guid>
+      <guid>/post/time-to-embrace-a-new-identity.html</guid>
       <description>&lt;p&gt;&lt;em&gt;First published in &lt;a href=&#34;https://ssc.ca/en/vol-283-august-2014&#34;&gt;SSC Liason&lt;/a&gt;, &lt;a href=&#34;http://magazine.amstat.org/blog/2014/10/01/statview-oct14/&#34;&gt;Amstat News&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;There is no question in my mind that statisticians are crossing a sea of changes. As a profession, we have made high-quality contributions to many fields over the past decades, with our engagement being perfectly epitomized in the recent book Statistics in Action: A Canadian Outlook. However, one cannot help but notice the recent trends (and hype) in the closely aligned—and somewhat vaguely defined—fields of analytics, Big Data, data science, and machine learning and wonder if our current model will continue to do well.&lt;/p&gt;
 &lt;p&gt;As a statistician, I am concerned. As a professional who recently migrated from the cancer research “sandbox” to the energy industry “sandbox,” I am facing numerous challenges associated with poor statistical literacy and the burden of the image problem we suffer from, which was so well captured by Brian Everitt in his book, Chance Rules: An Informal Guide to Probability, Risk, and Statistics: “[Statistics] conjures either a near-sighted character amassing volumes of figures about cricketers’ bowling and batting averages […] or a government civil servant compiling massive tables of figures” Hype aside, we are seeing a distortion of our field, the reinvention of many concepts, and the sad disregard of our contributions—often by those who do not analyze data professionally.&lt;/p&gt;
@@ -970,10 +970,10 @@ ANC
     
     <item>
       <title>Time to embrace a new identity?</title>
-      <link>https://alternative-stats.netlify.com/publication/time_to_embrace_new_identity.html</link>
+      <link>/publication/time_to_embrace_new_identity.html</link>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://alternative-stats.netlify.com/publication/time_to_embrace_new_identity.html</guid>
+      <guid>/publication/time_to_embrace_new_identity.html</guid>
       <description></description>
     </item>
     
