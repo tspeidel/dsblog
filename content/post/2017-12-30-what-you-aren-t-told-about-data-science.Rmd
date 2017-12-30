@@ -43,7 +43,7 @@ Kuhn and Johnson shed some light in their popular book "[Applied Predictive Mode
 "**Foresight into the analysis**" is the key sentence. Practitioners typically have a reasonable idea of what they are trying to achieve and what they do with the data is a reflection of that purpose. Let me illustrate how that "foresight" affects the choices we make with the data:
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, eval=FALSE}
 # library(googlesheets)
 # eg <- gs_title("esp_anonymized.xlsx")
 # eg1 <- gs_read(ss=eg, ws = "Sheet2", skip=0)
