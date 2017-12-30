@@ -92,13 +92,13 @@ NA, "...", NA, "D", NA, "...", NA)), .Names = c("Customer ID",
 library(knitr)
 library(kableExtra)
 
-kable(eg1, "html") %>%
+kable(eg1, "html", align = "l", caption = "<br> A fictitious customer purchase record: multiple rows per id") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
 
-kable(eg2, "html") %>%
+kable(eg2, "html", align = "l", caption = "<br> A fictitious customer purchase record: single row per id") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
 
-kable(eg3, "html") %>%
+kable(eg3, "html", align = "l", caption = "<br> A fictitious customer purchase record: multiple row per id and one row for each day from earliest purchase till today") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
 
 
