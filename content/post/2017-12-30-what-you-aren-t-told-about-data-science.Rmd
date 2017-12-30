@@ -1,0 +1,155 @@
+---
+title: What You Aren't Told About Data Science
+author: Thomas Speidel
+date: '2017-12-30'
+slug: what-you-aren-t-told-about-data-science
+categories:
+  - data analysis
+  - statistical literacy
+tags:
+  - datascience
+---
+
+ <img src="scrubbing.jpg" height="200px" width="700px" />
+
+
+<br>
+
+Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: "[Can Data Cleaning be automated?](https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192)". It reminded and enticed me to complete the post.
+
+<br>
+
+# Data Cleaning and Data Preparation
+
+When practitioners talk about data cleaning, they usually refer to a collection of tasks needed to **make the data amenable for analysis**. 
+
+Data is not necessarily invalid when we say they need to be cleaned. A common term in statistics that hasn't fully caught-on in other areas is that of **convenience data**: data that has been collected for reasons other than the purpose at task. Convenience data includes most of today's "Big Data" and certainly most data collected for administrative purposes. Convenience data almost always require varying amounts of preparation because **key variables for the task at hand may be missing**.
+
+In 2014 on the height of the "Big-Data" hype, [Steve Lohr](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) from the New York Times highlighted what practitioners have known for long time, but that came as a surprise to many. Lohr writes: 
+
+>    Working data scientists spend most of their time preparing data for analysis, a process that includes data collection, assessment, and transformation. Building an analysis data set is the first "hands-on" step in predictive analytics; analysts understand that this task is essntial for effective model building, and they invest as much time as needed to get it right. 
+
+Lohr goes on to highlight software tools capable of "finding, cleaning and blending data so that it is ready to be analyzed". Most practitioners are highly skeptical of such claims; and for good reasons: they fail to recognize the complexity of the task. Unsurprisingly, it appears none of these software tools have caught up with data scientists. But why?
+
+<br>
+
+# Judgment and Foresight
+Kuhn and Johnson shed some light in their popular book "[Applied Predictive Modeling (2013)](https://www.amazon.com/Applied-Predictive-Modeling-Max-Kuhn/dp/1461468485)". They write:
+
+>    One of the first steps in the model building process is to transform, or encode, the original data structure into a form that is most informative for the model. This encoding process is critical and must be done with **foresight into the analysis** that will be performed so that appropriate predictors can be elucidated from the original data.  
+
+"**Foresight into the analysis**" is the key sentence. Practitioners typically have a reasonable idea of what they are trying to achieve and what they do with the data is a reflection of that purpose. Let me illustrate how that "foresight" affects the choices we make with the data:
+
+
+```{r, echo=FALSE}
+# library(googlesheets)
+# eg <- gs_title("esp_anonymized.xlsx")
+# eg1 <- gs_read(ss=eg, ws = "Sheet2", skip=0)
+# eg2 <- gs_read(ss=eg, ws = "Sheet3", skip=0)
+# eg3 <- gs_read(ss=eg, ws = "Sheet4", skip=0)
+
+eg1 <- structure(list(`Customer ID` = c(1L, 2L, 2L, 3L), Purchase = structure(c(16601, 
+15942, 15943, 15922), class = "Date"), Item = c("A", "C", "A", 
+"D")), .Names = c("Customer ID", "Purchase", "Item"), row.names = c(NA, 
+-4L), spec = structure(list(cols = structure(list(`Customer ID` = structure(list(), class = c("collector_integer", 
+"collector")), Purchase = structure(list(format = ""), .Names = "format", class = c("collector_date", 
+"collector")), Item = structure(list(), class = c("collector_character", 
+"collector"))), .Names = c("Customer ID", "Purchase", "Item")), 
+    default = structure(list(), class = c("collector_guess", 
+    "collector"))), .Names = c("cols", "default"), class = "col_spec"), class = c("tbl_df", 
+"tbl", "data.frame"))
+
+eg2 <- structure(list(`Customer ID` = 1:3, `Purchase Month` = c("June", 
+"August", "August"), `A Items` = c(1L, 1L, 0L), `B Items` = c(0L, 
+0L, 0L), `C Items` = c(0L, 1L, 0L), `D Items` = c(0L, 0L, 1L)), .Names = c("Customer ID", 
+"Purchase Month", "A Items", "B Items", "C Items", "D Items"), row.names = c(NA, 
+-3L), spec = structure(list(cols = structure(list(`Customer ID` = structure(list(), class = c("collector_integer", 
+"collector")), `Purchase Month` = structure(list(), class = c("collector_character", 
+"collector")), `A Items` = structure(list(), class = c("collector_integer", 
+"collector")), `B Items` = structure(list(), class = c("collector_integer", 
+"collector")), `C Items` = structure(list(), class = c("collector_integer", 
+"collector")), `D Items` = structure(list(), class = c("collector_integer", 
+"collector"))), .Names = c("Customer ID", "Purchase Month", "A Items", 
+"B Items", "C Items", "D Items")), default = structure(list(), class = c("collector_guess", 
+"collector"))), .Names = c("cols", "default"), class = "col_spec"), class = c("tbl_df", 
+"tbl", "data.frame"))
+
+eg3 <- structure(list(`Customer ID` = c(1L, 1L, 1L, 1L, 1L, 2L, 2L, 
+2L, 2L, 2L, 3L, 3L, 3L, 3L), Purchase = c("2015-06-15", "2015-06-16", 
+"2015-06-17", "...", "2017-12-30", "2013-08-25", "2013-08-26", 
+"2013-08-27", "...", "2017-12-30", "2013-08-05", "2013-08-06", 
+"...", "2017-12-30"), Item = c("A", NA, NA, "...", NA, "C", "A", 
+NA, "...", NA, "D", NA, "...", NA)), .Names = c("Customer ID", 
+"Purchase", "Item"), row.names = c(NA, -14L), spec = structure(list(
+    cols = structure(list(`Customer ID` = structure(list(), class = c("collector_integer", 
+    "collector")), Purchase = structure(list(), class = c("collector_character", 
+    "collector")), Item = structure(list(), class = c("collector_character", 
+    "collector"))), .Names = c("Customer ID", "Purchase", "Item"
+    )), default = structure(list(), class = c("collector_guess", 
+    "collector"))), .Names = c("cols", "default"), class = "col_spec"), class = c("tbl_df", 
+"tbl", "data.frame"))
+
+library(knitr)
+library(kableExtra)
+
+kable(eg1, "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
+
+kable(eg2, "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
+
+kable(eg3, "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "full_width = F"), position = "float_left")
+
+
+```
+
+
+
+All three data-sets are realizations of the same underlying data, a fictitious customer purchase record. Neither is right or wrong, yet they all represent different "foresight" into how we attempt to analyze the data. There could be hundreds of ways to represent these data and each one of them may address a different analytically objective. 
+
+<br>
+
+# Can Data Be Clean?
+So, what's clean data? Notwithstanding data entry errors, it may not exist writes [David Mimno (2014)](http://www.mimno.org/articles/carpentry/) from Cornell University: 
+
+>    To me these imply that there is some kind of pure or clean data buried in a thin layer of non-clean data, and that one need only hose the dataset of to reveal the hard porcelain underneath the muck. In reality, the process is more like deciding how to cut into a piece of material, or how much to plane down a surface. It’s not that there’s any real distinction between good and bad, it’s more that some parts are or knottier than others. **Judgement is critical**. 
+
+**Foresight and now judgement**: two very human traits, both hard to automate except in very narrow problems. 
+
+We must also remind ourselves that clean data may not be achievable in the first place. With respect to data with errors, Bill Winkler provides plenty of examples on the complexities of [record linkage](https://en.wikipedia.org/wiki/Record_linkage) where exact matches may not be feasible to achieve (see [Winkler, 2014](http://onlinelibrary.wiley.com/doi/10.1002/wics.1317/abstract)). 
+
+[Chambers and Dinsmore (2014)](https://www.amazon.com/Advanced-Analytics-Methodologies-Driving-Business/dp/0133498603) write on the importance of this time consuming steps:
+
+>    Working data scientists spend most of their time preparing data for analytical a process that includes data collection, assessment, and transformation. Building an analysis data set is the first (hands-on" step in predictive analytics; analysts understand that this task is **essential for effective model building**, and they invest as much time as needed to get it right.
+
+<br>
+
+# Why the Surprise?
+For practitioners, it is hardly a surprise data preparation is tedious and time consuming requiring foresight and judgement. Why the surprise then? 
+[Ihab Ilyas](https://cs.uwaterloo.ca/~ilyas/) a professor at the University of Waterloo explains In a podcast interview on [O'Reilly Data Show](https://www.oreilly.com/ideas/why-data-preparation-frameworks-rely-on-human-in-the-loop-systems): 
+
+>    It has been also difficult to communicate these results to industry. And database practitioners, if you like, they were more into the well structured data and assuming a lot of good properties around this data, [and they were also] more interested in indexing this data, storing it, moving it from one place to another. And now, dealing with this large amount of diverse heterogeneous data with tons of errors, sidled across all business units in the same enterprise became a necessity. You cannot really avoid that anymore.
+
+Perhaps the problem lies in part with analytically literacy: organizations have traditionally dealt with straight forward analytically needs for which the data at hand was sufficiently usable: **filtering, joining, aggregating, adding, sorting** etc. For instance: *how many widgets were sold in store 11 in Q1 of 2016?* In a typical organization, many inconsistencies of data were carried forward, at times unnoticed, and left to the consumer of the data to deal with. This paradigm no longer holds in the era of data as an asset where: 
+
+*    the inconsistencies in the data may preclude more sophisticated analysis and certainly inferential and predictive objectives
+*    the data scientist both prepares and analyzes the data
+*    the data scientist expects to work with raw, unprocessed data
+
+Both Ilyas and Mimno highlight one aspect of doing data analysis data scientists may struggle with: **single source of the truth**. This concept helps IT design robust data warehouse systems, but is a misleading principle to adhere to when doing analysis.
+
+<br>
+
+
+# Can Data Preparation Be Automated?
+In my view, the short answer is no. Attempts to automate this tedious and time consuming task have largely failed because we do not know how to address the underlying problem. This does not mean that attempts at *facilitating* data preparation tasks have failed. On the contrary, there has been progress in this area. In a [recent Data Skeptic podcast](file:///home/tspeidel/GoogleDrive/dsblog/GitHub/dsblog/content/post/2017-12-30-what-you-aren-t-told-about-data-science.html), Microsoft's Joseph Sirosh reports that:
+
+>    Building on the latest research in program synthesis (PROSE) and data cleaning, Microsoft created a data wrangling technology that can drastically reduce the time that data scientists have to spend in coding and transforming data for machine learning. The way program synthesis works are, you give an input, the kind of data you want to wrangle, and the output you want to transform to, so you control the before and after. 
+
+I have not looked into these tools. Nonetheless, this seems significantly more tractable than auto-magically "*finding, cleaning and blending data so that it is ready to be analyzed*". A search in the academic literature reveals this to be an [active area of research](https://scholar.google.ca/scholar?q=program+synthesis+%28PROSE%29+data+transformations&hl=en&as_sdt=0%2C5&as_vis=1&as_ylo=2015&as_yhi=).
+
+It remains to be seen whether these tools will become flexible enough for practitioners to use. 
+
+<br><br>
+
