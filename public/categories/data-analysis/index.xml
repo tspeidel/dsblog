@@ -7,8 +7,399 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Thomas Speidel</copyright>
-    <lastBuildDate>Tue, 19 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/data-analysis.html" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What You Aren&#39;t Told About Data Science</title>
+      <link>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;scrubbing.jpg&#34; height=&#34;200px&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: “&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192&#34;&gt;Can Data Cleaning be automated?&lt;/a&gt;”. It reminded and enticed me to complete the post.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;data-cleaning-and-data-preparation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Cleaning and Data Preparation&lt;/h1&gt;
+&lt;p&gt;When practitioners talk about data cleaning, they usually refer to a collection of tasks needed to &lt;strong&gt;make the data amenable for analysis&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Data is not necessarily invalid when we say they need to be cleaned. A common term in statistics that hasn’t fully caught-on in other areas is that of &lt;strong&gt;convenience data&lt;/strong&gt;: data that has been collected for reasons other than the purpose at task. Convenience data includes most of today’s “Big Data” and certainly most data collected for administrative purposes. Convenience data almost always require varying amounts of preparation because &lt;strong&gt;key variables for the task at hand may be missing&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In 2014 on the height of the “Big-Data” hype, &lt;a href=&#34;https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&#34;&gt;Steve Lohr&lt;/a&gt; from the New York Times highlighted what practitioners have known for long time, but that came as a surprise to many. Lohr writes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Working data scientists spend most of their time preparing data for analysis, a process that includes data collection, assessment, and transformation. Building an analysis data set is the first “hands-on” step in predictive analytics; analysts understand that this task is essntial for effective model building, and they invest as much time as needed to get it right.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lohr goes on to highlight software tools capable of “finding, cleaning and blending data so that it is ready to be analyzed”. Most practitioners are highly skeptical of such claims; and for good reasons: they fail to recognize the complexity of the task. Unsurprisingly, it appears none of these software tools have caught up with data scientists. But why?&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;judgment-and-foresight&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Judgment and Foresight&lt;/h1&gt;
+&lt;p&gt;Kuhn and Johnson shed some light in their popular book “&lt;a href=&#34;https://www.amazon.com/Applied-Predictive-Modeling-Max-Kuhn/dp/1461468485&#34;&gt;Applied Predictive Modeling (2013)&lt;/a&gt;”. They write:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of the first steps in the model building process is to transform, or encode, the original data structure into a form that is most informative for the model. This encoding process is critical and must be done with &lt;strong&gt;foresight into the analysis&lt;/strong&gt; that will be performed so that appropriate predictors can be elucidated from the original data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;“&lt;strong&gt;Foresight into the analysis&lt;/strong&gt;” is the key sentence. Practitioners typically have a reasonable idea of what they are trying to achieve and what they do with the data is a reflection of that purpose. Let me illustrate how that “foresight” affects the choices we make with the data:&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Customer ID
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Purchase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Item
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2015-06-15
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+C
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-26
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+D
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Customer ID
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Purchase Month
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+A Items
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+B Items
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+C Items
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+D Items
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+June
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+August
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+August
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Customer ID
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Purchase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Item
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2015-06-15
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2015-06-16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2015-06-17
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2017-12-30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+C
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-26
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-27
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2017-12-30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+D
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2013-08-06
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+…
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2017-12-30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;All three data-sets are realizations of the same underlying data, a fictitious customer purchase record. Neither is right or wrong, yet they all represent different “foresight” into how we attempt to analyze the data. There could be hundreds of ways to represent these data and each one of them may address a different analytically objective.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;can-data-be-clean&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Can Data Be Clean?&lt;/h1&gt;
+&lt;p&gt;So, what’s clean data? Notwithstanding data entry errors, it may not exist writes &lt;a href=&#34;http://www.mimno.org/articles/carpentry/&#34;&gt;David Mimno (2014)&lt;/a&gt; from Cornell University:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To me these imply that there is some kind of pure or clean data buried in a thin layer of non-clean data, and that one need only hose the dataset of to reveal the hard porcelain underneath the muck. In reality, the process is more like deciding how to cut into a piece of material, or how much to plane down a surface. It’s not that there’s any real distinction between good and bad, it’s more that some parts are or knottier than others. &lt;strong&gt;Judgement is critical&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Foresight and now judgement&lt;/strong&gt;: two very human traits, both hard to automate except in very narrow problems.&lt;/p&gt;
+&lt;p&gt;We must also remind ourselves that clean data may not be achievable in the first place. With respect to data with errors, Bill Winkler provides plenty of examples on the complexities of &lt;a href=&#34;https://en.wikipedia.org/wiki/Record_linkage&#34;&gt;record linkage&lt;/a&gt; where exact matches may not be feasible to achieve (see &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1002/wics.1317/abstract&#34;&gt;Winkler, 2014&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Advanced-Analytics-Methodologies-Driving-Business/dp/0133498603&#34;&gt;Chambers and Dinsmore (2014)&lt;/a&gt; write on the importance of this time consuming steps:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Working data scientists spend most of their time preparing data for analytical a process that includes data collection, assessment, and transformation. Building an analysis data set is the first (hands-on&amp;quot; step in predictive analytics; analysts understand that this task is &lt;strong&gt;essential for effective model building&lt;/strong&gt;, and they invest as much time as needed to get it right.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-the-surprise&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why the Surprise?&lt;/h1&gt;
+&lt;p&gt;For practitioners, it is hardly a surprise data preparation is tedious and time consuming requiring foresight and judgement. Why the surprise then? &lt;a href=&#34;https://cs.uwaterloo.ca/~ilyas/&#34;&gt;Ihab Ilyas&lt;/a&gt; a professor at the University of Waterloo explains In a podcast interview on &lt;a href=&#34;https://www.oreilly.com/ideas/why-data-preparation-frameworks-rely-on-human-in-the-loop-systems&#34;&gt;O’Reilly Data Show&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It has been also difficult to communicate these results to industry. And database practitioners, if you like, they were more into the well structured data and assuming a lot of good properties around this data, [and they were also] more interested in indexing this data, storing it, moving it from one place to another. And now, dealing with this large amount of diverse heterogeneous data with tons of errors, sidled across all business units in the same enterprise became a necessity. You cannot really avoid that anymore.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Perhaps the problem lies in part with analytically literacy: organizations have traditionally dealt with straight forward analytically needs for which the data at hand was sufficiently usable: &lt;strong&gt;filtering, joining, aggregating, adding, sorting&lt;/strong&gt; etc. For instance: &lt;em&gt;how many widgets were sold in store 11 in Q1 of 2016?&lt;/em&gt; In a typical organization, many inconsistencies of data were carried forward, at times unnoticed, and left to the consumer of the data to deal with. This paradigm no longer holds in the era of data as an asset where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the inconsistencies in the data may preclude more sophisticated analysis and certainly inferential and predictive objectives&lt;/li&gt;
+&lt;li&gt;the data scientist both prepares and analyzes the data&lt;/li&gt;
+&lt;li&gt;the data scientist expects to work with raw, unprocessed data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both Ilyas and Mimno highlight one aspect of doing data analysis data scientists may struggle with: &lt;strong&gt;single source of the truth&lt;/strong&gt;. This concept helps IT design robust data warehouse systems, but is a misleading principle to adhere to when doing analysis.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;can-data-preparation-be-automated&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Can Data Preparation Be Automated?&lt;/h1&gt;
+&lt;p&gt;In my view, the short answer is no. Attempts to automate this tedious and time consuming task have largely failed because we do not know how to address the underlying problem. This does not mean that attempts at &lt;em&gt;facilitating&lt;/em&gt; data preparation tasks have failed. On the contrary, there has been progress in this area. In a &lt;a href=&#34;file:///home/tspeidel/GoogleDrive/dsblog/GitHub/dsblog/content/post/2017-12-30-what-you-aren-t-told-about-data-science.html&#34;&gt;recent Data Skeptic podcast&lt;/a&gt;, Microsoft’s Joseph Sirosh reports that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Building on the latest research in program synthesis (PROSE) and data cleaning, Microsoft created a data wrangling technology that can drastically reduce the time that data scientists have to spend in coding and transforming data for machine learning. The way program synthesis works are, you give an input, the kind of data you want to wrangle, and the output you want to transform to, so you control the before and after.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I have not looked into these tools. Nonetheless, this seems significantly more tractable than auto-magically “&lt;em&gt;finding, cleaning and blending data so that it is ready to be analyzed&lt;/em&gt;”. A search in the academic literature reveals this to be an &lt;a href=&#34;https://scholar.google.ca/scholar?q=program+synthesis+%28PROSE%29+data+transformations&amp;amp;hl=en&amp;amp;as_sdt=0%2C5&amp;amp;as_vis=1&amp;amp;as_ylo=2015&amp;amp;as_yhi=&#34;&gt;active area of research&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It remains to be seen whether these tools will become flexible enough for practitioners to use.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>One Common Mistake Data Analysts Make and How to Avoid It</title>

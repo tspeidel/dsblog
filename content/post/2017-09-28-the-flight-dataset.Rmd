@@ -82,33 +82,33 @@ library(kableExtra)
 ## DOWNLOAD KAGGLE AVIATION DATA
 ##----------------------------------------------------------------------------------------------------------------------
 ## Scrape zip file
-loginurl = "https://www.kaggle.com/account/login"
-dataurl  = "https://www.kaggle.com/usdot/flight-delays/downloads/flights.csv"
-
-pars=list(
-  UserName="",
-  Password=""
-)
-agent="Mozilla/5.0"
-
-curl = getCurlHandle()
-curlSetOpt(cookiejar="cookies.txt",  useragent = agent, followlocation = TRUE, curl=curl)
-welcome=postForm(loginurl, .params = pars, curl=curl)
-
-bdown=function(url, file, curl){
-  f = CFILE(file, mode="wb")
-  curlPerform(url = url, writedata = f@ref, noprogress = FALSE, curl = curl)
-  close(f)
-}
-
-ret = bdown(dataurl, "Data/flights.zip", curl)
-
-rm(curl)
-gc()
-
-
-## unzip
-unzip ("Data/flights.zip", exdir = "Data")
+# loginurl = "https://www.kaggle.com/account/login"
+# dataurl  = "https://www.kaggle.com/usdot/flight-delays/downloads/flights.csv"
+# 
+# pars=list(
+#   UserName="",
+#   Password=""
+# )
+# agent="Mozilla/5.0"
+# 
+# curl = getCurlHandle()
+# curlSetOpt(cookiejar="cookies.txt",  useragent = agent, followlocation = TRUE, curl=curl)
+# welcome=postForm(loginurl, .params = pars, curl=curl)
+# 
+# bdown=function(url, file, curl){
+#   f = CFILE(file, mode="wb")
+#   curlPerform(url = url, writedata = f@ref, noprogress = FALSE, curl = curl)
+#   close(f)
+# }
+# 
+# ret = bdown(dataurl, "Data/flights.zip", curl)
+# 
+# rm(curl)
+# gc()
+# 
+# 
+# ## unzip
+# unzip ("Data/flights.zip", exdir = "Data")
 ```
 
 
@@ -146,6 +146,10 @@ flights <- flights %>%
 flights2 <- flights %>%
      separate(scheduled.departure, c("dep.hr", "dep.min"), sep = 2) %>%
      separate(arrival.time, c("arr.hr", "arr.min"), sep = 2) %>%
+     mutate(dep.hr = as.integer(dep.hr)) %>%
+     mutate(dep.min = as.integer(dep.min)) %>%
+     mutate(arr.hr = as.integer(arr.hr)) %>%
+     mutate(arr.min = as.integer(arr.min)) %>%
      mutate(dep.sched = make_datetime(year, month, day, dep.hr, dep.min)) %>%
      mutate(arr.act = make_datetime(year, month, day, arr.hr, arr.min)) %>%
      mutate(dep.sched.hr = as.factor(hour(dep.sched))) %>%
