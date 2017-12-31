@@ -11,7 +11,7 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>What You Aren&#39;t Told About Data Science</title>
+      <title>What You Aren’t Told About Data Science</title>
       <link>/post/what-you-aren-t-told-about-data-science.html</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -39,9 +39,12 @@
 &lt;/blockquote&gt;
 &lt;p&gt;“&lt;strong&gt;Foresight into the analysis&lt;/strong&gt;” is the key sentence. Practitioners typically have a reasonable idea of what they are trying to achieve and what they do with the data is a reflection of that purpose. Let me illustrate how that “foresight” affects the choices we make with the data:&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;&lt;br&gt; A fictitious customer purchase record: multiple rows per id
+&lt;/caption&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 Customer ID
 &lt;/th&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
@@ -54,7 +57,7 @@ Item
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -65,7 +68,7 @@ A
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -76,7 +79,7 @@ C
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -87,7 +90,7 @@ A
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -100,95 +103,101 @@ D
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;&lt;br&gt; A fictitious customer purchase record: single row per id
+&lt;/caption&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 Customer ID
 &lt;/th&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
 Purchase Month
 &lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 A Items
 &lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 B Items
 &lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 C Items
 &lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 D Items
 &lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
 June
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
 August
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
 August
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 0
 &lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;&lt;br&gt; A fictitious customer purchase record: multiple row per id and one row for each day from earliest purchase till today
+&lt;/caption&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 Customer ID
 &lt;/th&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
@@ -201,7 +210,7 @@ Item
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -212,7 +221,7 @@ A
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -223,7 +232,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -234,7 +243,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -245,7 +254,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 1
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -256,7 +265,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -267,7 +276,7 @@ C
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -278,7 +287,7 @@ A
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -289,7 +298,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -300,7 +309,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -311,7 +320,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -322,7 +331,7 @@ D
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -333,7 +342,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -344,7 +353,7 @@ NA
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
 3
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
