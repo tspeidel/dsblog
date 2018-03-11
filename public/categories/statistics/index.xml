@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistics on Alternative Stats</title>
-    <link>/categories/statistics.html</link>
+    <link>https://alternative-stats.netlify.com/categories/statistics.html</link>
     <description>Recent content in Statistics on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Time to Embrace a New Identity?</title>
-      <link>/post/time-to-embrace-a-new-identity.html</link>
+      <link>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</link>
       <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-to-embrace-a-new-identity.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</guid>
       <description>&lt;p&gt;&lt;em&gt;First published in &lt;a href=&#34;https://ssc.ca/en/vol-283-august-2014&#34;&gt;SSC Liason&lt;/a&gt;, &lt;a href=&#34;http://magazine.amstat.org/blog/2014/10/01/statview-oct14/&#34;&gt;Amstat News&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;There is no question in my mind that statisticians are crossing a sea of changes. As a profession, we have made high-quality contributions to many fields over the past decades, with our engagement being perfectly epitomized in the recent book Statistics in Action: A Canadian Outlook. However, one cannot help but notice the recent trends (and hype) in the closely aligned—and somewhat vaguely defined—fields of analytics, Big Data, data science, and machine learning and wonder if our current model will continue to do well.&lt;/p&gt;
 &lt;p&gt;As a statistician, I am concerned. As a professional who recently migrated from the cancer research “sandbox” to the energy industry “sandbox,” I am facing numerous challenges associated with poor statistical literacy and the burden of the image problem we suffer from, which was so well captured by Brian Everitt in his book, Chance Rules: An Informal Guide to Probability, Risk, and Statistics: “[Statistics] conjures either a near-sighted character amassing volumes of figures about cricketers’ bowling and batting averages […] or a government civil servant compiling massive tables of figures” Hype aside, we are seeing a distortion of our field, the reinvention of many concepts, and the sad disregard of our contributions—often by those who do not analyze data professionally.&lt;/p&gt;

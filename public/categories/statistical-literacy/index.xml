@@ -2,20 +2,919 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistical Literacy on Alternative Stats</title>
-    <link>/categories/statistical-literacy.html</link>
+    <link>https://alternative-stats.netlify.com/categories/statistical-literacy.html</link>
     <description>Recent content in Statistical Literacy on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Thomas Speidel</copyright>
-    <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/statistical-literacy.html" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Fixing a Table for Improved Readibility</title>
+      <link>https://alternative-stats.netlify.com/post/fixing-a-table-for-improved-readibility.html</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alternative-stats.netlify.com/post/fixing-a-table-for-improved-readibility.html</guid>
+      <description>&lt;p&gt;I recently came across a fairly simple table of results. Being affected by an incurable condition called “graphical and tabular intolerance disorder”, I felt compelled to do something.&lt;/p&gt;
+&lt;p&gt;The table comes from the US Open Dataset initiative. In particular, the Federal Aviation Interactive Reporting System (FAIRS). You can read more about it &lt;a href=&#34;https://www.gsa.gov/policy-regulations/policy/aviation-management-policy/aviation-regulations-and-guidance-overview/report-government-aircraft-data&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The original table is contained in the &lt;a href=&#34;https://www.gsa.gov/cdnstatic/FY_2015_Aviation_Open_Data_Set__dtd_04-08-16.xlsx&#34;&gt;Excel spreadsheet&lt;/a&gt; worksheet &lt;code&gt;Table 4 Total Costs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;avi.table4.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;This is a poorly formatted table. In the 1981 article “&lt;a href=&#34;https://www.stat.washington.edu/pds/stat423/Documents/Ehrenberg.numeracy.pdf&#34;&gt;The Problem of Numeracy&lt;/a&gt;” (The American Statistician), Ehrenberg provides a number of valuable suggestions to improve the way data is presented.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Lack of numeracy is due mainly to the way data are presented. Most tables of data can be improved by following a few simple rules, such as drastic rounding, ordering the rows of a table by size, and giving a brief verbal summary of the data&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More than thirty years later, Ehrenberg’s suggestions are echoed by Swires-Hennessy in &lt;a href=&#34;https://www.amazon.com/Presenting-Data-Communicate-Message-Effectively/dp/1118489594&#34;&gt;Presenting Data: How to Communicate Your Message Effectively&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here, I will incorporate some of the best practices to improve the display of the information in this table. I’ll be using R, but for this task any spreadsheet tool will do. I’ll show the R code as I go along. Non-R users can skip these and jump to the end result.&lt;/p&gt;
+&lt;div id=&#34;download-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Download the Data&lt;/h2&gt;
+&lt;p&gt;First we download the data and assign it to the object &lt;code&gt;avi&lt;/code&gt; which is a dataframe:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Packages
+library(readxl)
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+
+
+## Download data
+url &amp;lt;- &amp;quot;https://www.gsa.gov/cdnstatic/FY_2015_Aviation_Open_Data_Set__dtd_04-08-16.xlsx&amp;quot;
+file &amp;lt;- &amp;quot;avi.xlsx&amp;quot;
+if (!file.exists(file)) download.file(url, file)
+
+avi &amp;lt;- read_excel(&amp;quot;/home/tspeidel/GoogleDrive/dsblog/dsblog/avi.xlsx&amp;quot;, 
+    sheet = &amp;quot;Table 4 Total Costs&amp;quot;, skip = 2)
+
+kable(avi)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Department or Agency&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2013&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2014&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2015&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Agriculture&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;155395227&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;142286692&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;182766978&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Commerce&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11167070&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;10523256&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11083859&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Energy&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;22100903&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;24322856&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;23549439&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Health and Human Services&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Homeland Security&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;226775706&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;233554545&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;187032343&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Justice&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;72911197&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;40790749&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;30478568&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of State&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;361855973&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;250545091&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;243860040&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Transportation&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;83684482&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;82519582&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;76481166&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of the Interior&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;57436231&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;96191478&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;112175711&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Environmental Protection Agency&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;259722&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;48805&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;214898&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Aeronautics and Space Administration&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;167397561&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;213753911&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;152074855&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Science Foundation&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;6996610&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;6142732&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;4199225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tennessee Valley Authority&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;679377&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;665687&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;7487795&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1166660059&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1101345384&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1031404877&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ok that’s a good start.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shortening-the-numbers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Shortening the Numbers&lt;/h2&gt;
+&lt;p&gt;We usually don’t require utmost precision in a summary table and having long numbers is just going to tax our cognitive abilities.&lt;/p&gt;
+&lt;p&gt;Ehrenberg writes: “&lt;em&gt;Scanning different figures or doing mental arithmetic are forms of mental interruption. This explains why we have such difficulty using longer numbers&lt;/em&gt;”. Edward Tufte makes similar point in his work while the Nobel proze winner Herbert Simon provides much of the foundational rationale.&lt;/p&gt;
+&lt;p&gt;We have around 9 figures. There’s absolutely no reason to preserve these. So we are going to divide them by 1,000,000 to ease our cognitive strain:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;avi %&amp;gt;%
+     mutate(`Department or Agency` = as.factor(`Department or Agency`)) %&amp;gt;%
+     mutate_if(is.character, as.numeric) %&amp;gt;%
+     mutate_if(is.numeric, funs(as.numeric(./10^6))) %&amp;gt;%
+     as.tibble() -&amp;gt; avi
+     
+kable(avi)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Department or Agency&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2013&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2014&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2015&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Agriculture&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;155.395227&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;142.286692&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;182.766978&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Commerce&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.167070&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.523256&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.083859&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Energy&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;22.100903&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.322856&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;23.549439&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Health and Human Services&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Homeland Security&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;226.775706&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;233.554545&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;187.032343&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Justice&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;72.911197&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;40.790749&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;30.478568&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of State&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;361.855973&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;250.545091&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;243.860040&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Transportation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;83.684482&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;82.519582&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;76.481166&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of the Interior&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;57.436231&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;96.191478&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;112.175711&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Environmental Protection Agency&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.259722&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.048805&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.214898&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Aeronautics and Space Administration&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.397561&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;213.753911&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;152.074855&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Science Foundation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.996610&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.142732&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.199225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tennessee Valley Authority&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.679377&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.665687&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.487795&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1166.660059&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1101.345384&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1031.404877&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;That’s better. Notice how we still have too many degits. This is unecessary precision. We’ll get back to that later since we’ll do it in one pass when the table is ready.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;marginals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Marginals&lt;/h2&gt;
+&lt;p&gt;The next step is to add marginals. It would help if we had a column with the mean cost by department for the three years. This is important because it will provide the sorting order. R usually thinks vector-wise (or column-wise) and I’m too lazy to &lt;a href=&#34;https://www.rdocumentation.org/packages/reshape2/versions/1.4.3/topics/melt.data.frame&#34;&gt;melt&lt;/a&gt; the data. The little known &lt;code&gt;rowwise()&lt;/code&gt; function comes to the rescue:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;avi %&amp;gt;%
+     rowwise() %&amp;gt;% 
+     mutate(`Mean Cost` = mean(c(`FY 2013`, `FY 2014`, `FY 2015`), na.rm = TRUE)) %&amp;gt;%
+     ungroup() %&amp;gt;%
+     as.tibble() -&amp;gt; avi
+
+kable(avi)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Department or Agency&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2013&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2014&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2015&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Mean Cost&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Agriculture&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;155.395227&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;142.286692&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;182.766978&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;160.149632&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Commerce&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.167070&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.523256&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.083859&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.924728&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Energy&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;22.100903&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.322856&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;23.549439&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;23.324399&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Health and Human Services&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NaN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Homeland Security&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;226.775706&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;233.554545&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;187.032343&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;215.787531&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Justice&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;72.911197&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;40.790749&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;30.478568&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;48.060171&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of State&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;361.855973&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;250.545091&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;243.860040&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;285.420368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Transportation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;83.684482&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;82.519582&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;76.481166&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;80.895077&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of the Interior&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;57.436231&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;96.191478&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;112.175711&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;88.601140&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Environmental Protection Agency&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.259722&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.048805&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.214898&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.174475&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Aeronautics and Space Administration&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.397561&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;213.753911&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;152.074855&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;177.742109&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Science Foundation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.996610&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.142732&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.199225&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.779522&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tennessee Valley Authority&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.679377&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.665687&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.487795&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.944286&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1166.660059&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1101.345384&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1031.404877&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1099.803440&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;order&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Order&lt;/h2&gt;
+&lt;p&gt;The table appears to be sorted in alphabetical order. This is not ideal. Tufte suggests humnans are pretty good at finding information by eye scanning. What we are not good at is to sort the data by memory: we’ll loose track after a few rows of data. So let’s order the data, highest to lowest. What do we sort by? The mean cost, that’s what it’s for:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;avi %&amp;gt;%
+     arrange(desc(`Mean Cost`)) %&amp;gt;%
+     as.tibble() -&amp;gt; avi
+
+avi &amp;lt;- avi[c(2:14, 1), ] 
+kable(avi)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Department or Agency&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2013&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2014&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;FY 2015&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Mean Cost&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of State&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;361.855973&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;250.545091&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;243.860040&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;285.420368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Homeland Security&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;226.775706&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;233.554545&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;187.032343&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;215.787531&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Aeronautics and Space Administration&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.397561&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;213.753911&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;152.074855&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;177.742109&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Agriculture&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;155.395227&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;142.286692&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;182.766978&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;160.149632&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of the Interior&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;57.436231&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;96.191478&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;112.175711&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;88.601140&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Transportation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;83.684482&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;82.519582&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;76.481166&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;80.895077&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Justice&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;72.911197&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;40.790749&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;30.478568&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;48.060171&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Energy&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;22.100903&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;24.322856&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;23.549439&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;23.324399&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Commerce&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.167070&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.523256&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.083859&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.924728&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Science Foundation&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.996610&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.142732&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.199225&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.779522&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tennessee Valley Authority&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.679377&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.665687&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.487795&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.944286&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Environmental Protection Agency&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.259722&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.048805&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.214898&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.174475&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Health and Human Services&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NaN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1166.660059&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1101.345384&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1031.404877&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1099.803440&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-the-number-of-figures&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Back to the number of figures&lt;/h2&gt;
+&lt;p&gt;Now that we have a table let’s round off all the numbers. This is a bit tricky: if we round off all the numbers to 0 decimal places, any number below 1, like Tennessee, will get 0. It turns out we can apply a conditional formatting. This is a bit ugly, but here it goes:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;avi %&amp;gt;%
+     mutate_if(is.numeric, funs(if_else(. &amp;lt; 10, format(round(., 1), 1), format(round(., 0), 0)))) %&amp;gt;%
+     as.tibble() -&amp;gt; avi
+
+kable(avi)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Department or Agency&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2013&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2014&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;FY 2015&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Mean Cost&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of State&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;362&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;251&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;244&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;285&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Homeland Security&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;227&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;234&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;187&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;216&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Aeronautics and Space Administration&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;167&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;214&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;152&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;178&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Agriculture&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;155&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;142&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;183&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;160&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of the Interior&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;57&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;96&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;112&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Transportation&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;84&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;83&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;81&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Justice&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;73&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;41&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;30&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Energy&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;22&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;24&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Commerce&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;National Science Foundation&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;7.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;6.1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;4.2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;5.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tennessee Valley Authority&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;7.5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Environmental Protection Agency&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Department of Health and Human Services&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1167&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1101&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1031&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prettify&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Prettify&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kable(avi, &amp;quot;html&amp;quot;, align = &amp;quot;l&amp;quot;) %&amp;gt;%
+  kable_styling(bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;)) %&amp;gt;%
+  row_spec(nrow(avi), bold = T) %&amp;gt;%
+  footnote(general = &amp;quot;*In millions of dollars*&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Department or Agency
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+FY 2013
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+FY 2014
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+FY 2015
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Mean Cost
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of State
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+362
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+251
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+244
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+285
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Homeland Security
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+227
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+234
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+187
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+216
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+National Aeronautics and Space Administration
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+167
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+214
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+152
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+178
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Agriculture
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+155
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+142
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+183
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+160
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of the Interior
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+57
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+96
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+112
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+89
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Transportation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+84
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+83
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+76
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+81
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Justice
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+73
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+41
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+48
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Energy
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+22
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+24
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+24
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+23
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Commerce
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+National Science Foundation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+7.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+6.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+4.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.8
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Tennessee Valley Authority
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+7.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.9
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Environmental Protection Agency
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Department of Health and Human Services
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+1167
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+1101
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+1031
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+1100
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;td style=&#34;padding: 0; border: 0;&#34; colspan=&#34;100%&#34;&gt;
+&lt;strong&gt;Note: &lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;padding: 0; border: 0;&#34; colspan=&#34;100%&#34;&gt;
+&lt;sup&gt;&lt;/sup&gt; &lt;em&gt;In millions of dollars&lt;/em&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>What You Aren’t Told About Data Science</title>
-      <link>/post/what-you-aren-t-told-about-data-science.html</link>
+      <link>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/what-you-aren-t-told-about-data-science.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;scrubbing.jpg&#34; height=&#34;200px&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: “&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192&#34;&gt;Can Data Cleaning be automated?&lt;/a&gt;”. It reminded and enticed me to complete the post.&lt;/p&gt;
@@ -412,10 +1311,10 @@ NA
     
     <item>
       <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
-      <link>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
+      <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
       <description>&lt;p&gt;The best past of my job is that, as &lt;a href=&#34;http://www.nytimes.com/2000/07/28/us/john-tukey-85-statistician-coined-the-word-software.html?mcubz=0&#34;&gt;John Tukey&lt;/a&gt; famously said, &lt;strong&gt;I get to play in everyone’ sandbox&lt;/strong&gt;. It also brings positive unintended ramifications: we get to cross-pollinate fields. Perhaps, none of this is clearer than how biostatistics helps with &lt;a href=&#34;http://press.anu.edu.au/node/162/download&#34;&gt;policing serious crime in Australia&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;policing_resious_crime.jpg&#34; /&gt;
@@ -471,10 +1370,10 @@ NA
     
     <item>
       <title>10 Big Data Myths</title>
-      <link>/post/10-big-data-myths.html</link>
+      <link>https://alternative-stats.netlify.com/post/10-big-data-myths.html</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/10-big-data-myths.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/10-big-data-myths.html</guid>
       <description>&lt;p&gt;Everyone seems to like top-10 lists and many organizations are interested in Big Data, so it seems timely to write my own top 10 list on Big Data. A premise is warranted. Those who know me, know how much I ditest the term “Big Data”. Yet, for good or worse, Big Data is here to stay and so it’s important that we try clarify what it is and it isn’t.&lt;/p&gt;
 &lt;p&gt;see &lt;a href=&#34;https://dzone.com/articles/10-big-data-myths-exploded&#34; class=&#34;uri&#34;&gt;https://dzone.com/articles/10-big-data-myths-exploded&lt;/a&gt; Gartner: &lt;a href=&#34;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&#34; class=&#34;uri&#34;&gt;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&lt;/a&gt; Diego slides: &lt;a href=&#34;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&#34; class=&#34;uri&#34;&gt;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&lt;/a&gt; &lt;a href=&#34;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&#34; class=&#34;uri&#34;&gt;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&lt;/a&gt; &lt;a href=&#34;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&#34; class=&#34;uri&#34;&gt;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;what-is-big-data&#34; class=&#34;section level2&#34;&gt;
@@ -509,10 +1408,10 @@ NA
     
     <item>
       <title>One Common Mistake Data Analysts Make and How to Avoid It</title>
-      <link>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
+      <link>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</link>
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/one-common-mistake-data-analysts-make-and-how-to-avoid-it.html</guid>
       <description>&lt;p&gt;One common mistake inexperienced analyst do in analysing data is that of &lt;strong&gt;assigning a special role to time&lt;/strong&gt;. In my line of work, I see this a lot. Signs of &lt;em&gt;chronophrenia&lt;/em&gt;, a term I just made up, are the unusual focus on calendar time: from line plots of multiple variables on the y-axis against time on the x-axis, to frequencies or averages by some meaningful time cut-off: monthly, quarterly, yearly and so on.&lt;/p&gt;
 &lt;p&gt;Don’t get me wrong, I think there are plenty of scenarios when looking at time makes perfect sense and both the statistical, engineering and econometric literature continue to make substantial contributions to this area (I can think of &lt;a href=&#34;https://en.wikipedia.org/wiki/Change_detection&#34;&gt;change point detection&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Kalman_filter&#34;&gt;Kalman filters&lt;/a&gt; and &lt;a href=&#34;http://www.springer.com/cda/content/document/cda_downloaddocument/9780387772370-c1.pdf?SGWID=0-0-45-771009-p173891512&#34;&gt;Bayesian/Dynamic time series&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Often the analyst attempts to visually assess whether a &lt;strong&gt;shift in time exists&lt;/strong&gt;. The hope is that the shift can be tied to a special cause known to the analyst (for instance a change that was introduced at known point in time) and that this would represent evidence in favour or against a hypothesis.&lt;/p&gt;

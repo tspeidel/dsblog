@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Critical Thinking on Alternative Stats</title>
-    <link>/categories/critical-thinking.html</link>
+    <link>https://alternative-stats.netlify.com/categories/critical-thinking.html</link>
     <description>Recent content in Critical Thinking on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>What You Aren’t Told About Data Science</title>
-      <link>/post/what-you-aren-t-told-about-data-science.html</link>
+      <link>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/what-you-aren-t-told-about-data-science.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;scrubbing.jpg&#34; height=&#34;200px&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: “&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192&#34;&gt;Can Data Cleaning be automated?&lt;/a&gt;”. It reminded and enticed me to complete the post.&lt;/p&gt;
@@ -412,10 +412,10 @@ NA
     
     <item>
       <title>10 Big Data Myths</title>
-      <link>/post/10-big-data-myths.html</link>
+      <link>https://alternative-stats.netlify.com/post/10-big-data-myths.html</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/10-big-data-myths.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/10-big-data-myths.html</guid>
       <description>&lt;p&gt;Everyone seems to like top-10 lists and many organizations are interested in Big Data, so it seems timely to write my own top 10 list on Big Data. A premise is warranted. Those who know me, know how much I ditest the term “Big Data”. Yet, for good or worse, Big Data is here to stay and so it’s important that we try clarify what it is and it isn’t.&lt;/p&gt;
 &lt;p&gt;see &lt;a href=&#34;https://dzone.com/articles/10-big-data-myths-exploded&#34; class=&#34;uri&#34;&gt;https://dzone.com/articles/10-big-data-myths-exploded&lt;/a&gt; Gartner: &lt;a href=&#34;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&#34; class=&#34;uri&#34;&gt;https://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/#30da54dd42f6&lt;/a&gt; Diego slides: &lt;a href=&#34;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&#34; class=&#34;uri&#34;&gt;https://www.slideshare.net/kuonen/the-power-of-data-insights-big-data-as-the-fuel-and-analytics-as-the-engine-of-the-digital-transformation&lt;/a&gt; &lt;a href=&#34;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&#34; class=&#34;uri&#34;&gt;https://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide&lt;/a&gt; &lt;a href=&#34;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&#34; class=&#34;uri&#34;&gt;https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;what-is-big-data&#34; class=&#34;section level2&#34;&gt;
@@ -450,10 +450,10 @@ NA
     
     <item>
       <title>Time to Embrace a New Identity?</title>
-      <link>/post/time-to-embrace-a-new-identity.html</link>
+      <link>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</link>
       <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-to-embrace-a-new-identity.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/time-to-embrace-a-new-identity.html</guid>
       <description>&lt;p&gt;&lt;em&gt;First published in &lt;a href=&#34;https://ssc.ca/en/vol-283-august-2014&#34;&gt;SSC Liason&lt;/a&gt;, &lt;a href=&#34;http://magazine.amstat.org/blog/2014/10/01/statview-oct14/&#34;&gt;Amstat News&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;There is no question in my mind that statisticians are crossing a sea of changes. As a profession, we have made high-quality contributions to many fields over the past decades, with our engagement being perfectly epitomized in the recent book Statistics in Action: A Canadian Outlook. However, one cannot help but notice the recent trends (and hype) in the closely aligned—and somewhat vaguely defined—fields of analytics, Big Data, data science, and machine learning and wonder if our current model will continue to do well.&lt;/p&gt;
 &lt;p&gt;As a statistician, I am concerned. As a professional who recently migrated from the cancer research “sandbox” to the energy industry “sandbox,” I am facing numerous challenges associated with poor statistical literacy and the burden of the image problem we suffer from, which was so well captured by Brian Everitt in his book, Chance Rules: An Informal Guide to Probability, Risk, and Statistics: “[Statistics] conjures either a near-sighted character amassing volumes of figures about cricketers’ bowling and batting averages […] or a government civil servant compiling massive tables of figures” Hype aside, we are seeing a distortion of our field, the reinvention of many concepts, and the sad disregard of our contributions—often by those who do not analyze data professionally.&lt;/p&gt;

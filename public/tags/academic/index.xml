@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Content tagged as &#39;Academic&#39; on Alternative Stats</title>
-    <link>/tags/academic.html</link>
+    <link>https://alternative-stats.netlify.com/tags/academic.html</link>
     <description>Recent content in Content tagged as &#39;Academic&#39; on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

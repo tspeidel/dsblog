@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Datascience on Alternative Stats</title>
-    <link>/tags/datascience.html</link>
+    <link>https://alternative-stats.netlify.com/tags/datascience.html</link>
     <description>Recent content in Datascience on Alternative Stats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>What You Aren’t Told About Data Science</title>
-      <link>/post/what-you-aren-t-told-about-data-science.html</link>
+      <link>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/what-you-aren-t-told-about-data-science.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/what-you-aren-t-told-about-data-science.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;scrubbing.jpg&#34; height=&#34;200px&#34; width=&#34;700px&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago I started writing a post on data preparation which I never completed and eventually forgot. A recent LinkedIn post by Kevin Gray stimulated a rich conversation around: “&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6352086326745096192&#34;&gt;Can Data Cleaning be automated?&lt;/a&gt;”. It reminded and enticed me to complete the post.&lt;/p&gt;
@@ -412,10 +412,10 @@ NA
     
     <item>
       <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
-      <link>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
+      <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
       <description>&lt;p&gt;The best past of my job is that, as &lt;a href=&#34;http://www.nytimes.com/2000/07/28/us/john-tukey-85-statistician-coined-the-word-software.html?mcubz=0&#34;&gt;John Tukey&lt;/a&gt; famously said, &lt;strong&gt;I get to play in everyone’ sandbox&lt;/strong&gt;. It also brings positive unintended ramifications: we get to cross-pollinate fields. Perhaps, none of this is clearer than how biostatistics helps with &lt;a href=&#34;http://press.anu.edu.au/node/162/download&#34;&gt;policing serious crime in Australia&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;policing_resious_crime.jpg&#34; /&gt;
@@ -471,10 +471,10 @@ NA
     
     <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
-      <link>/post/2015-07-23-r-rmarkdown.html</link>
+      <link>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown.html</guid>
+      <guid>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</guid>
       <description>&lt;div id=&#34;user-2016&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;useR! 2016&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;stanford.jpg&#34; /&gt; The &lt;a href=&#34;http://user2016.org/&#34;&gt;useR! conference&lt;/a&gt; in Stanford was awesome. Never did I expect to see so many participants (read: data geeks) and high level &lt;a href=&#34;http://user2016.org/#sponsors&#34;&gt;sponsors&lt;/a&gt;. For what was a little known language that’s been around in one form or another since the late seventies, this is quite amazing. Some memorable talks:&lt;/p&gt;
