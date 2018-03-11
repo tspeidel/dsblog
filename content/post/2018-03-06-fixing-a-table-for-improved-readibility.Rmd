@@ -151,8 +151,9 @@ formattable(avi, list(
 ```
 
 ### An Interactive Table
+*For some reason the table is not displaying properly below. I'm currently investigating why.*
 
-```{r}
+```{r, results="asis"}
 library(DT)
 
 options(DT.fillContainer = FALSE)
