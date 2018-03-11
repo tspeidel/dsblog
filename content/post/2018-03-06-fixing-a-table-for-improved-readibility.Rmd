@@ -181,6 +181,7 @@ datatable(avi,
 
 ```
 
+<br>
 
 # Final Thoughts
 A lot has changed since Ehrenberg's 1981 article. For one thing, most communication nowadays is done via screen, so what worked well for print does not necessarily work well for screen. With the focus on web media, we know have access to multiple style elements that attempt to achieve good readability. For instance, alternative striped rows, sorting, bar graph overlay etc.

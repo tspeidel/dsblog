@@ -411,65 +411,6 @@ NA
     </item>
     
     <item>
-      <title>Biostatistics and Policing: An Example of Application and the Role of Statistical Literacy in Today&#39;s Organizations</title>
-      <link>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</link>
-      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alternative-stats.netlify.com/post/biostatistics-and-policing-an-example-of-application-and-the-role-of-statistical-literacy-in-today-s-organizations.html</guid>
-      <description>&lt;p&gt;The best past of my job is that, as &lt;a href=&#34;http://www.nytimes.com/2000/07/28/us/john-tukey-85-statistician-coined-the-word-software.html?mcubz=0&#34;&gt;John Tukey&lt;/a&gt; famously said, &lt;strong&gt;I get to play in everyone’ sandbox&lt;/strong&gt;. It also brings positive unintended ramifications: we get to cross-pollinate fields. Perhaps, none of this is clearer than how biostatistics helps with &lt;a href=&#34;http://press.anu.edu.au/node/162/download&#34;&gt;policing serious crime in Australia&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;policing_resious_crime.jpg&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;One of the authors, Robyn Attewell, writes:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Most of my statistical perspective is grounded in biostatistics which is the application of statistics in the study of disease and, more generally, the human condition. This is an area in which statistical principles have been well accepted and applied. I do not mean that all doctors know what a chi-square test is or could interpret a logistic regression. However, advances in knowledge in epidemiology and the treatment of disease have occurred through research which has been undertaken with the application of sound statistical methodology. The evidence base for prevention and treatment of disease has moved from personal experience and chronicles of case histories to global randomised controlled trials, longitudinal cohort studies and meta-analyses. The movement within the fields of public health and medicine towards a quantitative evidence base is so strong that the pharmaceutical industry, for example, is very highly regulated. New drug treatments are not able to be registered or receive government subsidy unless supported by a structured compilation of efficacy and safety data. It has to be proven beyond reasonable doubt that new medications work and their positive impact on the target disease outweighs any negatives through adverse side effects.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Attewell’s experience mirrors mine (and I bet, that of many other statisticians), having too worked in &lt;a href=&#34;http://epi-research.org/&#34;&gt;biostatistics&lt;/a&gt; for many years and later migrated into energy.&lt;/p&gt;
-&lt;p&gt;Perhaps not as homogeneous as in other fields - there are indeed isolated pockets of statistical excellence in the energy industry - I routinely come across areas that not only lack statistical principles, but where I perceive a mistrust in something that’s perceived as new and unfamiliar.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Do we over-simplify the statistical methods so that they can be grasped by our audience at the cost of being woefully wrong?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;True, statistics and data science aren’t easy and thinking probabilistically is admittedly hard. This presents a challenge for the statistician or the data scientist: do we over-simplify the statistical methods so that they can be grasped by our audience at the cost of being woefully wrong? Do we, instead engage in the daunting task of educating our audience in statistical principles? Or shall we present the finding as unquestionable dogma … hey, just trust the fancy math?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Statistics is hard. Multiple regression is hard. Figuring out the appropriate denominator is hard. These errors aren’t so elementary. Andrew Gelman, 2016.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/stephensenn?lang=en&#34;&gt;Stephen John Senn&lt;/a&gt; captures parts of this dilemma when he writes:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;On the other hand, the need for clear results cannot be cited as grounds for only ever using the simplest of techniques. Statistics is no different from other sciences in this respect. Just as we cannot insist that chemist determine pH using litmus paper because that is what the non-chemist remembers from school, so we cannot insist that statisticians restrict themselves to a simple T-test because this was state of the art in 1908.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Our colleagues who focus on &lt;strong&gt;machine learning&lt;/strong&gt; (&lt;strong&gt;ML&lt;/strong&gt;) face similar dilemmas, perhaps even more so, given that ML methods tend to be uninterpretable &lt;a href=&#34;https://www.nature.com/news/can-we-open-the-black-box-of-ai-1.20731&#34;&gt;black-boxes&lt;/a&gt;. Two recent papers that touch on this subjects are &lt;a href=&#34;http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf&#34;&gt;Ribeiro&lt;/a&gt; et al. and &lt;a href=&#34;http://opim.wharton.upenn.edu/risk/library/WPAF201410-AlgorthimAversion-Dietvorst-Simmons-Massey.pdf&#34;&gt;Dietvorst&lt;/a&gt; et al.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ribeiro.png&#34; /&gt; &lt;img src=&#34;dietvorst.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;There’s no question in my mind that we need to increase the level of statistical literacy. However, the job of filling the gap left by an educational system that has historically failed to teach statistics cannot be entirely left in the hands of applied statisticians and data scientists.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We teach our children the mathematics of certainty - geometry and trigonometry- but not the mathematics of uncertainty, statistical thinking. &lt;a href=&#34;https://en.wikipedia.org/wiki/Gerd_Gigerenzer&#34;&gt;Gert Gigerenzer&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div id=&#34;what-to-do&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What to Do?&lt;/h2&gt;
-&lt;p&gt;I see very encouraging signs in recent &lt;a href=&#34;https://en.wikipedia.org/wiki/Science,_technology,_engineering,_and_mathematics&#34;&gt;STEM&lt;/a&gt; graduates, anecdotally at least, since I see them much better prepared to recognize statistical problems.&lt;/p&gt;
-&lt;p&gt;However, the issue remains for those who have not had a chance to upgrade their skills: &lt;strong&gt;how then, do we increase data and statistical literacy in the current leaders and decision makers?&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;vendors-consultants-and-hype-make-things-a-lot-harder&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Vendors, Consultants (and Hype) Make Things a Lot Harder&lt;/h2&gt;
-&lt;p&gt;For the practicing statistician and data scientist, vendors and consultants are a double edge sword. On one hands they help by bringing to light how statistics, ML (or whatever catchy word du jour is in vogue) can help organizations; because they have a more direct communication channel with upper management, the message makes it to the top.&lt;/p&gt;
-&lt;p&gt;On the other hand, they have little vested interests in educating, let alone provide a fair view of the landscape. And in the long run, this is damaging.&lt;/p&gt;
-&lt;p&gt;Perhaps, none of this damage is clearer than what’s happening with IBM Watson in health care where the “&lt;a href=&#34;https://www.technologyreview.com/s/607965/a-reality-check-for-ibms-ai-ambitions/&#34;&gt;&lt;em&gt;unrealistic timelines or promises&lt;/em&gt;&lt;/a&gt;” are now becoming obvious and, perhaps, backfiring.&lt;/p&gt;
-&lt;p&gt;I’m not too worried about health care where the unrealistic claims are usually met with a dismissive shrug, precisely because, as Attewel writes, statistical principles have been well accepted and applied in that field.&lt;/p&gt;
-&lt;p&gt;But think about areas where statistical principles are not nearly as pervasive. Lack of statistical literacy, means our defense mechanism is unprepared. Instead, the receiver has to rely on faulty heuristics and anecdotes such as: “&lt;em&gt;I heard SmartCo is using this tool, so it must be good&lt;/em&gt;” with little science to back them up.&lt;/p&gt;
-&lt;p&gt;With time, the organization realizes those promises never materialized, the claims were unrealistic, and preconceived notions are re-inforced after a brief hiatus of hope. In a field where there are no certain truths, it’s easy to throw away the baby with the bathwater.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Data Science and Statistics, including more specialized branches, such as biostatistics, have wide applicability in many analytical problems&lt;/li&gt;
-&lt;li&gt;Statistical literacy and critical thinking present a gap that is easily exploited&lt;/li&gt;
-&lt;li&gt;We need to do a better job at educating people unfamiliar with data science and statistics, but this cannot be left entirely in the hands of the practitioner&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Data Science in the Organization: Things I Learned in 2016</title>
       <link>https://alternative-stats.netlify.com/post/2015-07-23-r-rmarkdown.html</link>
       <pubDate>Fri, 30 Dec 2016 21:13:14 -0500</pubDate>
